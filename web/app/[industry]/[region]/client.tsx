@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import Link from "next/link";
 
 interface Company {
@@ -40,7 +40,7 @@ interface MetaData {
 }
 
 function formatDate(s: string): string {
-  if (!s) return "—";
+  if (!s) return "\u2014";
   try { const p = s.split("/"); if (p.length===3) return new Date(`${p[2]}-${p[1]}-${p[0]}`).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}); } catch {}
   return s;
 }
@@ -62,7 +62,7 @@ function Sel({label,value,onChange,options}:{label:string;value:string;onChange:
 }
 
 function Tog({label,active,onClick}:{label:string;active:boolean;onClick:()=>void}) {
-  return <button onClick={onClick} className={`text-sm px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap ${active?"bg-blue-600 text-white border-blue-600":"bg-white text-gray-700 border-gray-300 hover:border-blue-400"}`}>{active?"✓ ":""}{label}</button>;
+  return <button onClick={onClick} className={`text-sm px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap ${active?"bg-blue-600 text-white border-blue-600":"bg-white text-gray-700 border-gray-300 hover:border-blue-400"}`}>{active?"\u2713 ":""}{label}</button>;
 }
 
 const AGE_ORDER=["Startup (0-2 yrs)","Early Stage (2-5 yrs)","Growing (5-10 yrs)","Established (10-20 yrs)","Veteran (20+ yrs)","Unknown"];
@@ -73,11 +73,12 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
   otherRegions:{industry:string;region:string;regionName:string;count:number}[];
   otherIndustries:{industry:string;industryName:string;region:string;count:number}[];
 }) {
-  const [companies, setCompanies] = useState<Company[]>(initialCompanies);
-  const [loadedPages, setLoadedPages] = useState(1); // page 0 is already loaded
-  const [loadingMore, setLoadingMore] = useState(false);
-  const [allLoaded, setAllLoaded] = useState(meta.totalPages <= 1);
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(0);
+  const [pageData, setPageData] = useState<Record<number, Company[]>>({0: initialCompanies});
+  const [loadingPage, setLoadingPage] = useState(false);
 
+  // Filter state
   const [search,setSearch]=useState("");
   const [ageBracket,setAgeBracket]=useState("All");
   const [sizeClass,setSizeClass]=useState("All");
@@ -94,42 +95,70 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
   const [rebranded,setRebranded]=useState(false);
   const [lpOnly,setLpOnly]=useState(false);
 
-  const loadMore = useCallback(async () => {
-    if (loadingMore || allLoaded) return;
-    setLoadingMore(true);
-    try {
-      const nextPage = loadedPages;
-      const res = await fetch(`/data/ir-pages/${meta.industry}__${meta.region}__${nextPage}.json`);
-      if (!res.ok) { setAllLoaded(true); return; }
-      const chunk: Company[] = await res.json();
-      if (chunk.length === 0) { setAllLoaded(true); return; }
-      setCompanies(prev => [...prev, ...chunk]);
-      setLoadedPages(prev => prev + 1);
-      if (nextPage + 1 >= meta.totalPages) setAllLoaded(true);
-    } catch { setAllLoaded(true); }
-    finally { setLoadingMore(false); }
-  }, [loadingMore, allLoaded, loadedPages, meta.industry, meta.region, meta.totalPages]);
+  const hasFilters = search || ageBracket!=="All" || sizeClass!=="All" || companyType!=="All" || town!=="All" || county!=="All" || accountsOverdue || confStmtOverdue || hasMortgages || hasSatisfied || excludeDormant || overseasOnly || rebranded || lpOnly;
 
-  const loadAll = useCallback(async () => {
-    if (loadingMore || allLoaded) return;
-    setLoadingMore(true);
+  // For filtered mode: load all data
+  const [allCompanies, setAllCompanies] = useState<Company[]|null>(null);
+  const [loadingAll, setLoadingAll] = useState(false);
+
+  // Fetch a specific page
+  const fetchPage = useCallback(async (pageNum: number) => {
+    if (pageData[pageNum]) return;
+    setLoadingPage(true);
     try {
-      const chunks: Company[] = [];
-      for (let p = loadedPages; p < meta.totalPages; p++) {
-        const res = await fetch(`/data/ir-pages/${meta.industry}__${meta.region}__${p}.json`);
-        if (!res.ok) break;
+      const res = await fetch(`/data/ir-pages/${meta.industry}__${meta.region}__${pageNum}.json`);
+      if (res.ok) {
         const chunk: Company[] = await res.json();
-        chunks.push(...chunk);
+        setPageData(prev => ({...prev, [pageNum]: chunk}));
       }
-      setCompanies(prev => [...prev, ...chunks]);
-      setLoadedPages(meta.totalPages);
-      setAllLoaded(true);
-    } catch { }
-    finally { setLoadingMore(false); }
-  }, [loadingMore, allLoaded, loadedPages, meta.industry, meta.region, meta.totalPages]);
+    } catch {}
+    setLoadingPage(false);
+  }, [pageData, meta.industry, meta.region]);
 
-  const filtered=useMemo(()=>{
-    let list=[...companies];
+  // Go to page
+  const goToPage = useCallback((pageNum: number) => {
+    setCurrentPage(pageNum);
+    fetchPage(pageNum);
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, [fetchPage]);
+
+  // Load all data for filtering
+  const loadAllForFiltering = useCallback(async () => {
+    if (allCompanies || loadingAll) return;
+    setLoadingAll(true);
+    const all: Company[] = [];
+    for (let p = 0; p < meta.totalPages; p++) {
+      if (pageData[p]) {
+        all.push(...pageData[p]);
+      } else {
+        try {
+          const res = await fetch(`/data/ir-pages/${meta.industry}__${meta.region}__${p}.json`);
+          if (res.ok) {
+            const chunk: Company[] = await res.json();
+            all.push(...chunk);
+          }
+        } catch {}
+      }
+    }
+    setAllCompanies(all);
+    setLoadingAll(false);
+  }, [allCompanies, loadingAll, meta.totalPages, meta.industry, meta.region, pageData]);
+
+  // Auto-load all data when a filter is applied
+  useEffect(() => {
+    if (hasFilters && !allCompanies && !loadingAll) {
+      loadAllForFiltering();
+    }
+  }, [hasFilters, allCompanies, loadingAll, loadAllForFiltering]);
+
+  // Current companies to display
+  const currentCompanies = pageData[currentPage] || [];
+
+  // Filtered list (only used when filters are active)
+  const filtered = useMemo(() => {
+    if (!hasFilters) return null;
+    if (!allCompanies) return null;
+    let list = [...allCompanies];
     if(search) list=list.filter(c=>c.name.toLowerCase().includes(search.toLowerCase())||c.postcode.toLowerCase().includes(search.toLowerCase())||c.postTown?.toLowerCase().includes(search.toLowerCase())||c.number?.includes(search));
     if(ageBracket!=="All") list=list.filter(c=>c.ageBracket===ageBracket);
     if(sizeClass!=="All") list=list.filter(c=>c.sizeClassification===sizeClass);
@@ -151,11 +180,19 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
     if(sortBy==="age-desc") list.sort((a,b)=>(b.ageYears??0)-(a.ageYears??0));
     if(sortBy==="age-asc") list.sort((a,b)=>(a.ageYears??0)-(b.ageYears??0));
     return list;
-  },[companies,search,ageBracket,sizeClass,companyType,town,county,accountsOverdue,confStmtOverdue,hasMortgages,hasSatisfied,excludeDormant,overseasOnly,rebranded,lpOnly,sortBy]);
+  },[allCompanies, hasFilters, search,ageBracket,sizeClass,companyType,town,county,accountsOverdue,confStmtOverdue,hasMortgages,hasSatisfied,excludeDormant,overseasOnly,rebranded,lpOnly,sortBy]);
+
+  // Display limit for filtered results
+  const [filteredDisplayLimit, setFilteredDisplayLimit] = useState(500);
+
+  // Which list to show
+  const isFilterMode = hasFilters;
+  const displayList = isFilterMode ? (filtered || []).slice(0, filteredDisplayLimit) : currentCompanies;
+  const totalFiltered = filtered?.length ?? 0;
 
   const activeFilters=[ageBracket!=="All",sizeClass!=="All",companyType!=="All",town!=="All",county!=="All",accountsOverdue,confStmtOverdue,hasMortgages,hasSatisfied,excludeDormant,overseasOnly,rebranded,lpOnly].filter(Boolean).length;
 
-  // Use pre-computed stats from meta (accurate for ALL companies, not just loaded ones)
+  // Use pre-computed stats from meta
   const dc = useMemo(()=>({
     accountsOverdue: meta.stats.accountsOverdueCount || 0,
     confStmtOverdue: meta.stats.confStmtOverdueCount || 0,
@@ -166,7 +203,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
     lp:              meta.stats.lpCount || 0,
   }),[meta.stats]);
 
-  function reset(){setSearch("");setAgeBracket("All");setSizeClass("All");setCompanyType("All");setTown("All");setCounty("All");setAccountsOverdue(false);setConfStmtOverdue(false);setHasMortgages(false);setHasSatisfied(false);setExcludeDormant(false);setOverseasOnly(false);setRebranded(false);setLpOnly(false);}
+  function reset(){setSearch("");setAgeBracket("All");setSizeClass("All");setCompanyType("All");setTown("All");setCounty("All");setAccountsOverdue(false);setConfStmtOverdue(false);setHasMortgages(false);setHasSatisfied(false);setExcludeDormant(false);setOverseasOnly(false);setRebranded(false);setLpOnly(false);setFilteredDisplayLimit(500);}
 
   const s=meta.stats;
   const townOpts=[{value:"All",label:"All towns"},...Object.entries(s.topTowns||{}).sort((a,b)=>b[1]-a[1]).map(([t,n])=>({value:t,label:`${t} (${n.toLocaleString()})`}))];
@@ -174,9 +211,12 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
   const ageOpts=[{value:"All",label:"All ages"},...AGE_ORDER.filter(b=>(s.ageBrackets?.[b]??0)>0).map(b=>({value:b,label:`${b} (${(s.ageBrackets?.[b]||0).toLocaleString()})`}))];
   const sizeOpts=[{value:"All",label:"All sizes"},...Object.entries(s.sizeClassifications||{}).sort((a,b)=>b[1]-a[1]).map(([x,n])=>({value:x,label:`${x} (${n.toLocaleString()})`}))];
   const typeOpts=[{value:"All",label:"All types"},...Object.entries(s.companyTypes||{}).sort((a,b)=>b[1]-a[1]).map(([t,n])=>({value:t,label:`${t} (${n.toLocaleString()})`}))];
-  const sortOpts=[{value:"newest",label:"Newest first"},{value:"oldest",label:"Oldest first"},{value:"name",label:"Name A–Z"},{value:"age-desc",label:"Oldest companies first"},{value:"age-asc",label:"Youngest companies first"},{value:"mortgages",label:"Most charges"}];
+  const sortOpts=[{value:"newest",label:"Newest first"},{value:"oldest",label:"Oldest first"},{value:"name",label:"Name A\u2013Z"},{value:"age-desc",label:"Oldest companies first"},{value:"age-asc",label:"Youngest companies first"},{value:"mortgages",label:"Most charges"}];
 
-  const hasAnyFilter = activeFilters > 0 || search.length > 0;
+  // Pagination controls
+  const totalPages = meta.totalPages;
+  const pageStart = currentPage * meta.pageSize + 1;
+  const pageEnd = Math.min((currentPage + 1) * meta.pageSize, meta.count);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -195,7 +235,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            {[{label:"Total",value:meta.count.toLocaleString()},{label:"Avg Age (yrs)",value:s.averageAgeYears??"—"},{label:"Accts Overdue",value:(s.accountsOverdueCount||0).toLocaleString()},{label:"With Charges",value:(s.withMortgagesCount||0).toLocaleString()}].map(x=>(
+            {[{label:"Total",value:meta.count.toLocaleString()},{label:"Avg Age (yrs)",value:s.averageAgeYears??"\u2014"},{label:"Accts Overdue",value:(s.accountsOverdueCount||0).toLocaleString()},{label:"With Charges",value:(s.withMortgagesCount||0).toLocaleString()}].map(x=>(
               <div key={x.label} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
                 <div className="text-xl font-bold text-blue-600">{x.value}</div>
                 <div className="text-xs text-gray-500 mt-1">{x.label}</div>
@@ -210,10 +250,9 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
               {activeFilters>0&&<button onClick={reset} className="text-sm text-blue-600 hover:underline">Reset all</button>}
             </div>
 
-            {!allLoaded && (
-              <div className="mb-4 bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-800">
-                {companies.length.toLocaleString()} of {meta.count.toLocaleString()} companies loaded.
-                {" "}<button onClick={loadAll} className="underline font-medium hover:text-amber-900">Load all</button> for complete filtering and search.
+            {isFilterMode && loadingAll && (
+              <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
+                Loading all {meta.count.toLocaleString()} companies for filtering... This may take a moment for large datasets.
               </div>
             )}
 
@@ -249,13 +288,22 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
             </div>
           </div>
 
+          {/* Status bar */}
           <div className="text-sm text-gray-600 mb-3">
-            Showing <strong>{filtered.length.toLocaleString()}</strong>{!allLoaded ? ` of ${companies.length.toLocaleString()} loaded` : ""} {allLoaded ? `of ${meta.count.toLocaleString()}` : ""} companies
+            {isFilterMode ? (
+              loadingAll ? "Loading data for filtering..." :
+              <>Showing <strong>{Math.min(filteredDisplayLimit, totalFiltered).toLocaleString()}</strong> of <strong>{totalFiltered.toLocaleString()}</strong> matching companies</>
+            ) : (
+              <>Page <strong>{currentPage + 1}</strong> of {totalPages.toLocaleString()} · Companies {pageStart.toLocaleString()}\u2013{pageEnd.toLocaleString()} of {meta.count.toLocaleString()}</>
+            )}
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-6">
-            {filtered.length===0?(
-              <div className="p-12 text-center text-gray-500">No companies match. <button onClick={reset} className="text-blue-600 underline">Reset</button></div>
+          {/* Company table */}
+          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-4">
+            {displayList.length===0?(
+              <div className="p-12 text-center text-gray-500">
+                {isFilterMode && loadingAll ? "Loading..." : <>No companies match. <button onClick={reset} className="text-blue-600 underline">Reset</button></>}
+              </div>
             ):(
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -270,7 +318,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-50">
-                    {filtered.map((c,i)=>(
+                    {displayList.map((c,i)=>(
                       <tr key={c.number||i} className="hover:bg-gray-50 transition-colors">
                         <td className="px-5 py-3.5">
                           <a href={c.number?`https://find-and-update.company-information.service.gov.uk/company/${c.number}`:`https://find-and-update.company-information.service.gov.uk/search?q=${encodeURIComponent(c.name)}`}
@@ -279,26 +327,26 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                           <div className="text-xs text-gray-400 font-mono">{c.number}</div>
                         </td>
                         <td className="px-4 py-3.5 text-gray-500 hidden sm:table-cell">
-                          <div>{c.postTown||"—"}</div>
+                          <div>{c.postTown||"\u2014"}</div>
                           <div className="text-xs text-gray-400">{c.postcode}</div>
                         </td>
                         <td className="px-4 py-3.5 text-gray-500 hidden md:table-cell">{formatDate(c.incorporated)}</td>
-                        <td className="px-4 py-3.5 text-gray-500 hidden lg:table-cell">{c.ageYears!=null?`${c.ageYears}y`:"—"}</td>
+                        <td className="px-4 py-3.5 text-gray-500 hidden lg:table-cell">{c.ageYears!=null?`${c.ageYears}y`:"\u2014"}</td>
                         <td className="px-4 py-3.5 hidden lg:table-cell">
                           {c.sizeClassification&&!["Unknown","Not Yet Filed"].includes(c.sizeClassification)?(
                             <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">{c.sizeClassification}</span>
-                          ):<span className="text-gray-300">—</span>}
+                          ):<span className="text-gray-300">{"\u2014"}</span>}
                         </td>
                         <td className="px-4 py-3.5">
                           <div className="flex flex-wrap gap-1">
-                            {c.accountsOverdue&&<Tag label="Accts ⚠️" colour="red"/>}
-                            {c.confStmtOverdue&&<Tag label="ConfStmt ⚠️" colour="amber"/>}
+                            {c.accountsOverdue&&<Tag label="Accts \u26a0\ufe0f" colour="red"/>}
+                            {c.confStmtOverdue&&<Tag label="ConfStmt \u26a0\ufe0f" colour="amber"/>}
                             {c.isDormant&&<Tag label="Dormant" colour="gray"/>}
                             {c.isOverseas&&<Tag label="Overseas" colour="purple"/>}
                             {c.isLP&&<Tag label="LP/LLP" colour="blue"/>}
                             {c.numMortgages>0&&<Tag label={`${c.numMortgages} charge${c.numMortgages>1?"s":""}`} colour="blue"/>}
                             {c.numMortSatisfied>0&&<Tag label={`${c.numMortSatisfied} satisfied`} colour="green"/>}
-                            {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0&&<Tag label="Clean ✓" colour="green"/>}
+                            {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0&&<Tag label="Clean \u2713" colour="green"/>}
                           </div>
                         </td>
                       </tr>
@@ -309,24 +357,57 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
             )}
           </div>
 
-          {/* Load more button */}
-          {!allLoaded && (
-            <div className="text-center mb-6">
+          {/* Pagination controls (browse mode) */}
+          {!isFilterMode && totalPages > 1 && (
+            <div className="flex items-center justify-between bg-white border border-gray-200 rounded-xl px-5 py-3 mb-6">
               <button
-                onClick={loadMore}
-                disabled={loadingMore}
-                className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-wait"
-              >
-                {loadingMore ? "Loading..." : `Load more companies (${companies.length.toLocaleString()} of ${meta.count.toLocaleString()} loaded)`}
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 0 || loadingPage}
+                className="text-sm font-medium text-blue-600 hover:text-blue-700 disabled:text-gray-300 disabled:cursor-not-allowed">
+                ← Previous
               </button>
+              <div className="flex items-center gap-1">
+                {/* Show page numbers */}
+                {(() => {
+                  const pages: number[] = [];
+                  const start = Math.max(0, currentPage - 2);
+                  const end = Math.min(totalPages - 1, currentPage + 2);
+                  if (start > 0) pages.push(0);
+                  if (start > 1) pages.push(-1); // ellipsis
+                  for (let i = start; i <= end; i++) pages.push(i);
+                  if (end < totalPages - 2) pages.push(-2); // ellipsis
+                  if (end < totalPages - 1) pages.push(totalPages - 1);
+                  return pages.map((p, idx) =>
+                    p < 0 ? <span key={`e${idx}`} className="text-gray-400 text-sm px-1">...</span> :
+                    <button key={p} onClick={() => goToPage(p)}
+                      className={`text-sm px-3 py-1 rounded-lg ${p === currentPage ? "bg-blue-600 text-white" : "text-gray-600 hover:bg-gray-100"}`}>
+                      {p + 1}
+                    </button>
+                  );
+                })()}
+              </div>
               <button
-                onClick={loadAll}
-                disabled={loadingMore}
-                className="ml-3 text-sm text-blue-600 hover:underline disabled:opacity-50"
-              >
-                Load all
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage >= totalPages - 1 || loadingPage}
+                className="text-sm font-medium text-blue-600 hover:text-blue-700 disabled:text-gray-300 disabled:cursor-not-allowed">
+                Next →
               </button>
             </div>
+          )}
+
+          {/* Show more button (filter mode) */}
+          {isFilterMode && filtered && totalFiltered > filteredDisplayLimit && (
+            <div className="text-center mb-6">
+              <button
+                onClick={() => setFilteredDisplayLimit(prev => prev + 500)}
+                className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors">
+                Show more ({(totalFiltered - filteredDisplayLimit).toLocaleString()} remaining)
+              </button>
+            </div>
+          )}
+
+          {loadingPage && (
+            <div className="text-center text-gray-400 text-sm mb-6">Loading page...</div>
           )}
 
           <div className="bg-blue-50 rounded-2xl p-6 mb-8">
