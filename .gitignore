@@ -2,3 +2,5 @@ node_modules/
 pipeline/companies.csv  
 web/.next/  
 web/node_modules/ 
+web/public/data/ir-meta/ 
+web/public/data/ir-pages/ 

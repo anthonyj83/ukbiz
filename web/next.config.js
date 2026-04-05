@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -10,16 +11,5 @@ const nextConfig = {
   compress: true,
   trailingSlash: false,
   poweredByHeader: false,
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Robots-Tag", value: "index, follow" },
-        ],
-      },
-    ];
-  },
 };
-
 module.exports = nextConfig;

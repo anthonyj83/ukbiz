@@ -4,8 +4,9 @@ import path from "path";
 import { notFound } from "next/navigation";
 import IndustryRegionClient from "./client";
 
-const DATA_DIR = path.join(process.cwd(), "public", "data");
-const IR_DIR   = path.join(DATA_DIR, "ir");
+const DATA_DIR   = path.join(process.cwd(), "public", "data");
+const META_DIR   = path.join(DATA_DIR, "ir-meta");
+const PAGES_DIR  = path.join(DATA_DIR, "ir-pages");
 
 function readJson<T>(filename: string): T | null {
   try {
@@ -13,10 +14,16 @@ function readJson<T>(filename: string): T | null {
   } catch { return null; }
 }
 
-function readPageData(industry: string, region: string) {
+function readMeta(industry: string, region: string) {
   try {
-    return JSON.parse(fs.readFileSync(path.join(IR_DIR, `${industry}__${region}.json`), "utf-8"));
+    return JSON.parse(fs.readFileSync(path.join(META_DIR, `${industry}__${region}.json`), "utf-8"));
   } catch { return null; }
+}
+
+function readCompanyPage(industry: string, region: string, page: number) {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(PAGES_DIR, `${industry}__${region}__${page}.json`), "utf-8"));
+  } catch { return []; }
 }
 
 interface ManifestEntry {
@@ -31,7 +38,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { industry: string; region: string } }): Promise<Metadata> {
-  const data = readPageData(params.industry, params.region);
+  const data = readMeta(params.industry, params.region);
   if (!data) return {};
   const title = `${data.industryName} Companies in ${data.regionName}`;
   const description = `Browse and filter ${data.count.toLocaleString()} active ${data.industryName.toLowerCase()} companies in ${data.regionName}. Filter by age, company type, overdue accounts, mortgages and more. Official Companies House data.`;
@@ -44,16 +51,17 @@ export async function generateMetadata({ params }: { params: { industry: string;
 }
 
 export default function IndustryRegionPage({ params }: { params: { industry: string; region: string } }) {
-  const data = readPageData(params.industry, params.region);
-  if (!data) notFound();
+  const meta = readMeta(params.industry, params.region);
+  if (!meta) notFound();
+
+  // Only embed the first page of companies (200) — client fetches more on demand
+  const firstPageCompanies = readCompanyPage(params.industry, params.region, 0);
 
   const manifest = readJson<ManifestEntry[]>("manifest.json") ?? [];
-
   const otherRegions = manifest
     .filter(m => m.industry === params.industry && m.region !== params.region)
     .sort((a, b) => b.count - a.count)
     .slice(0, 8);
-
   const otherIndustries = manifest
     .filter(m => m.region === params.region && m.industry !== params.industry)
     .sort((a, b) => b.count - a.count)
@@ -61,7 +69,8 @@ export default function IndustryRegionPage({ params }: { params: { industry: str
 
   return (
     <IndustryRegionClient
-      data={data}
+      meta={meta}
+      initialCompanies={firstPageCompanies}
       otherRegions={otherRegions}
       otherIndustries={otherIndustries}
     />

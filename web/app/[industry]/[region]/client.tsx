@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 
 interface Company {
@@ -33,9 +33,10 @@ interface Stats {
 
 interface Affiliate { label: string; description: string; url: string; cta: string; }
 
-interface PageData {
+interface MetaData {
   industry: string; industryName: string; region: string; regionName: string;
-  count: number; companies: Company[]; stats: Stats; affiliates: Affiliate[]; updated: string;
+  count: number; stats: Stats; affiliates: Affiliate[]; updated: string;
+  totalPages: number; pageSize: number;
 }
 
 function formatDate(s: string): string {
@@ -66,11 +67,17 @@ function Tog({label,active,onClick}:{label:string;active:boolean;onClick:()=>voi
 
 const AGE_ORDER=["Startup (0-2 yrs)","Early Stage (2-5 yrs)","Growing (5-10 yrs)","Established (10-20 yrs)","Veteran (20+ yrs)","Unknown"];
 
-export default function IndustryRegionClient({data,otherRegions,otherIndustries}:{
-  data:PageData;
+export default function IndustryRegionClient({meta,initialCompanies,otherRegions,otherIndustries}:{
+  meta: MetaData;
+  initialCompanies: Company[];
   otherRegions:{industry:string;region:string;regionName:string;count:number}[];
   otherIndustries:{industry:string;industryName:string;region:string;count:number}[];
 }) {
+  const [companies, setCompanies] = useState<Company[]>(initialCompanies);
+  const [loadedPages, setLoadedPages] = useState(1); // page 0 is already loaded
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [allLoaded, setAllLoaded] = useState(meta.totalPages <= 1);
+
   const [search,setSearch]=useState("");
   const [ageBracket,setAgeBracket]=useState("All");
   const [sizeClass,setSizeClass]=useState("All");
@@ -87,8 +94,42 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
   const [rebranded,setRebranded]=useState(false);
   const [lpOnly,setLpOnly]=useState(false);
 
+  const loadMore = useCallback(async () => {
+    if (loadingMore || allLoaded) return;
+    setLoadingMore(true);
+    try {
+      const nextPage = loadedPages;
+      const res = await fetch(`/data/ir-pages/${meta.industry}__${meta.region}__${nextPage}.json`);
+      if (!res.ok) { setAllLoaded(true); return; }
+      const chunk: Company[] = await res.json();
+      if (chunk.length === 0) { setAllLoaded(true); return; }
+      setCompanies(prev => [...prev, ...chunk]);
+      setLoadedPages(prev => prev + 1);
+      if (nextPage + 1 >= meta.totalPages) setAllLoaded(true);
+    } catch { setAllLoaded(true); }
+    finally { setLoadingMore(false); }
+  }, [loadingMore, allLoaded, loadedPages, meta.industry, meta.region, meta.totalPages]);
+
+  const loadAll = useCallback(async () => {
+    if (loadingMore || allLoaded) return;
+    setLoadingMore(true);
+    try {
+      const chunks: Company[] = [];
+      for (let p = loadedPages; p < meta.totalPages; p++) {
+        const res = await fetch(`/data/ir-pages/${meta.industry}__${meta.region}__${p}.json`);
+        if (!res.ok) break;
+        const chunk: Company[] = await res.json();
+        chunks.push(...chunk);
+      }
+      setCompanies(prev => [...prev, ...chunks]);
+      setLoadedPages(meta.totalPages);
+      setAllLoaded(true);
+    } catch { }
+    finally { setLoadingMore(false); }
+  }, [loadingMore, allLoaded, loadedPages, meta.industry, meta.region, meta.totalPages]);
+
   const filtered=useMemo(()=>{
-    let list=[...data.companies];
+    let list=[...companies];
     if(search) list=list.filter(c=>c.name.toLowerCase().includes(search.toLowerCase())||c.postcode.toLowerCase().includes(search.toLowerCase())||c.postTown?.toLowerCase().includes(search.toLowerCase())||c.number?.includes(search));
     if(ageBracket!=="All") list=list.filter(c=>c.ageBracket===ageBracket);
     if(sizeClass!=="All") list=list.filter(c=>c.sizeClassification===sizeClass);
@@ -110,35 +151,24 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
     if(sortBy==="age-desc") list.sort((a,b)=>(b.ageYears??0)-(a.ageYears??0));
     if(sortBy==="age-asc") list.sort((a,b)=>(a.ageYears??0)-(b.ageYears??0));
     return list;
-  },[data.companies,search,ageBracket,sizeClass,companyType,town,county,accountsOverdue,confStmtOverdue,hasMortgages,hasSatisfied,excludeDormant,overseasOnly,rebranded,lpOnly,sortBy]);
+  },[companies,search,ageBracket,sizeClass,companyType,town,county,accountsOverdue,confStmtOverdue,hasMortgages,hasSatisfied,excludeDormant,overseasOnly,rebranded,lpOnly,sortBy]);
 
   const activeFilters=[ageBracket!=="All",sizeClass!=="All",companyType!=="All",town!=="All",county!=="All",accountsOverdue,confStmtOverdue,hasMortgages,hasSatisfied,excludeDormant,overseasOnly,rebranded,lpOnly].filter(Boolean).length;
 
-  // Dynamic counts based on current dropdown/search filters (updates quick filter labels)
-  const preToggle = useMemo(()=>{
-    let list=[...data.companies];
-    if(search) list=list.filter(c=>c.name.toLowerCase().includes(search.toLowerCase())||c.postcode.toLowerCase().includes(search.toLowerCase())||c.postTown?.toLowerCase().includes(search.toLowerCase())||c.number?.includes(search));
-    if(ageBracket!=="All") list=list.filter(c=>c.ageBracket===ageBracket);
-    if(sizeClass!=="All") list=list.filter(c=>c.sizeClassification===sizeClass);
-    if(companyType!=="All") list=list.filter(c=>c.companyType===companyType);
-    if(town!=="All") list=list.filter(c=>(c.postTown||"").trim().toLowerCase()===(town||"").trim().toLowerCase());
-    if(county!=="All") list=list.filter(c=>(c.county||"").trim().toLowerCase()===(county||"").trim().toLowerCase());
-    return list;
-  },[data.companies,search,ageBracket,sizeClass,companyType,town,county]);
-
+  // Use pre-computed stats from meta (accurate for ALL companies, not just loaded ones)
   const dc = useMemo(()=>({
-    accountsOverdue: preToggle.filter(c=>c.accountsOverdue).length,
-    confStmtOverdue: preToggle.filter(c=>c.confStmtOverdue).length,
-    hasMortgages:    preToggle.filter(c=>c.numMortgages>0).length,
-    hasSatisfied:    preToggle.filter(c=>c.numMortSatisfied>0).length,
-    overseas:        preToggle.filter(c=>c.isOverseas).length,
-    rebranded:       preToggle.filter(c=>c.hasPreviousName).length,
-    lp:              preToggle.filter(c=>c.isLP).length,
-  }),[preToggle]);
+    accountsOverdue: meta.stats.accountsOverdueCount || 0,
+    confStmtOverdue: meta.stats.confStmtOverdueCount || 0,
+    hasMortgages:    meta.stats.withMortgagesCount || 0,
+    hasSatisfied:    meta.stats.withSatisfiedCharges || 0,
+    overseas:        meta.stats.overseasCount || 0,
+    rebranded:       meta.stats.rebrandedCount || 0,
+    lp:              meta.stats.lpCount || 0,
+  }),[meta.stats]);
 
   function reset(){setSearch("");setAgeBracket("All");setSizeClass("All");setCompanyType("All");setTown("All");setCounty("All");setAccountsOverdue(false);setConfStmtOverdue(false);setHasMortgages(false);setHasSatisfied(false);setExcludeDormant(false);setOverseasOnly(false);setRebranded(false);setLpOnly(false);}
 
-  const s=data.stats;
+  const s=meta.stats;
   const townOpts=[{value:"All",label:"All towns"},...Object.entries(s.topTowns||{}).sort((a,b)=>b[1]-a[1]).map(([t,n])=>({value:t,label:`${t} (${n.toLocaleString()})`}))];
   const countyOpts=[{value:"All",label:"All counties"},...Object.entries(s.counties||{}).sort((a,b)=>b[1]-a[1]).map(([c,n])=>({value:c,label:`${c} (${n.toLocaleString()})`}))];
   const ageOpts=[{value:"All",label:"All ages"},...AGE_ORDER.filter(b=>(s.ageBrackets?.[b]??0)>0).map(b=>({value:b,label:`${b} (${(s.ageBrackets?.[b]||0).toLocaleString()})`}))];
@@ -146,24 +176,26 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
   const typeOpts=[{value:"All",label:"All types"},...Object.entries(s.companyTypes||{}).sort((a,b)=>b[1]-a[1]).map(([t,n])=>({value:t,label:`${t} (${n.toLocaleString()})`}))];
   const sortOpts=[{value:"newest",label:"Newest first"},{value:"oldest",label:"Oldest first"},{value:"name",label:"Name A–Z"},{value:"age-desc",label:"Oldest companies first"},{value:"age-asc",label:"Youngest companies first"},{value:"mortgages",label:"Most charges"}];
 
+  const hasAnyFilter = activeFilters > 0 || search.length > 0;
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <nav className="text-sm text-gray-500 mb-6 flex flex-wrap gap-1 items-center">
         <Link href="/" className="hover:text-blue-600">Home</Link><span>/</span>
-        <Link href={`/${data.industry}`} className="hover:text-blue-600">{data.industryName}</Link><span>/</span>
-        <span className="text-gray-900">{data.regionName}</span>
+        <Link href={`/${meta.industry}`} className="hover:text-blue-600">{meta.industryName}</Link><span>/</span>
+        <span className="text-gray-900">{meta.regionName}</span>
       </nav>
 
       <div className="lg:grid lg:grid-cols-3 lg:gap-10">
         <div className="lg:col-span-2">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">{data.industryName} Companies in {data.regionName}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">{meta.industryName} Companies in {meta.regionName}</h1>
           <p className="text-lg text-gray-600 mb-6">
-            {data.count.toLocaleString()} active {data.industryName.toLowerCase()} businesses in {data.regionName}.
+            {meta.count.toLocaleString()} active {meta.industryName.toLowerCase()} businesses in {meta.regionName}.
             {s.averageAgeYears && <> Average age: <strong>{s.averageAgeYears} years</strong>.</>}
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            {[{label:"Total",value:data.count.toLocaleString()},{label:"Avg Age (yrs)",value:s.averageAgeYears??"—"},{label:"Accts Overdue",value:(s.accountsOverdueCount||0).toLocaleString()},{label:"With Charges",value:(s.withMortgagesCount||0).toLocaleString()}].map(x=>(
+            {[{label:"Total",value:meta.count.toLocaleString()},{label:"Avg Age (yrs)",value:s.averageAgeYears??"—"},{label:"Accts Overdue",value:(s.accountsOverdueCount||0).toLocaleString()},{label:"With Charges",value:(s.withMortgagesCount||0).toLocaleString()}].map(x=>(
               <div key={x.label} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
                 <div className="text-xl font-bold text-blue-600">{x.value}</div>
                 <div className="text-xs text-gray-500 mt-1">{x.label}</div>
@@ -177,6 +209,14 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
               <h2 className="font-semibold text-gray-900">Filter & Search {activeFilters>0&&<span className="ml-2 bg-blue-600 text-white text-xs rounded-full px-2 py-0.5">{activeFilters} active</span>}</h2>
               {activeFilters>0&&<button onClick={reset} className="text-sm text-blue-600 hover:underline">Reset all</button>}
             </div>
+
+            {!allLoaded && (
+              <div className="mb-4 bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-800">
+                {companies.length.toLocaleString()} of {meta.count.toLocaleString()} companies loaded.
+                {" "}<button onClick={loadAll} className="underline font-medium hover:text-amber-900">Load all</button> for complete filtering and search.
+              </div>
+            )}
+
             <div className="mb-4">
               <label className="block text-xs font-medium text-gray-600 mb-1">Search by name, postcode, town or company number</label>
               <input type="text" value={search} onChange={e=>setSearch(e.target.value)} placeholder="e.g. Acme, BT1, Belfast, NI123456..." className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
@@ -210,7 +250,7 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
           </div>
 
           <div className="text-sm text-gray-600 mb-3">
-            Showing <strong>{filtered.length.toLocaleString()}</strong> of {data.count.toLocaleString()} companies
+            Showing <strong>{filtered.length.toLocaleString()}</strong>{!allLoaded ? ` of ${companies.length.toLocaleString()} loaded` : ""} {allLoaded ? `of ${meta.count.toLocaleString()}` : ""} companies
           </div>
 
           <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-6">
@@ -269,30 +309,50 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
             )}
           </div>
 
+          {/* Load more button */}
+          {!allLoaded && (
+            <div className="text-center mb-6">
+              <button
+                onClick={loadMore}
+                disabled={loadingMore}
+                className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-wait"
+              >
+                {loadingMore ? "Loading..." : `Load more companies (${companies.length.toLocaleString()} of ${meta.count.toLocaleString()} loaded)`}
+              </button>
+              <button
+                onClick={loadAll}
+                disabled={loadingMore}
+                className="ml-3 text-sm text-blue-600 hover:underline disabled:opacity-50"
+              >
+                Load all
+              </button>
+            </div>
+          )}
+
           <div className="bg-blue-50 rounded-2xl p-6 mb-8">
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">{data.industryName} Businesses in {data.regionName}</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">{meta.industryName} Businesses in {meta.regionName}</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
-              There are <strong>{data.count.toLocaleString()} active {data.industryName.toLowerCase()} businesses</strong> in {data.regionName}.
+              There are <strong>{meta.count.toLocaleString()} active {meta.industryName.toLowerCase()} businesses</strong> in {meta.regionName}.
               {s.averageAgeYears&&<> Average age is {s.averageAgeYears} years.</>}
               {(s.accountsOverdueCount||0)>0&&<> {s.accountsOverdueCount} have overdue accounts.</>}
               {(s.withMortgagesCount||0)>0&&<> {s.withMortgagesCount} have registered charges.</>}
-              {" "}Sourced from Companies House under the Open Government Licence. Updated {data.updated}.
+              {" "}Sourced from Companies House under the Open Government Licence. Updated {meta.updated}.
             </p>
           </div>
 
           {otherRegions.length>0&&(
             <div className="mb-8">
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">{data.industryName} in Other Regions</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-3">{meta.industryName} in Other Regions</h2>
               <div className="flex flex-wrap gap-2">
-                {otherRegions.map(r=>(<Link key={r.region} href={`/${r.industry}/${r.region}`} className="bg-white border border-gray-200 text-sm px-4 py-2 rounded-full hover:border-blue-400 hover:text-blue-600 transition-colors">{r.regionName} ({r.count.toLocaleString()})</Link>))}
+                {otherRegions.map(r=>(<Link key={r.region} href={`/${meta.industry}/${r.region}`} className="bg-white border border-gray-200 text-sm px-4 py-2 rounded-full hover:border-blue-400 hover:text-blue-600 transition-colors">{r.regionName} ({r.count.toLocaleString()})</Link>))}
               </div>
             </div>
           )}
           {otherIndustries.length>0&&(
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">More Industries in {data.regionName}</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-3">More Industries in {meta.regionName}</h2>
               <div className="flex flex-wrap gap-2">
-                {otherIndustries.map(i=>(<Link key={i.industry} href={`/${i.industry}/${i.region}`} className="bg-white border border-gray-200 text-sm px-4 py-2 rounded-full hover:border-blue-400 hover:text-blue-600 transition-colors">{i.industryName} ({i.count.toLocaleString()})</Link>))}
+                {otherIndustries.map(i=>(<Link key={i.industry} href={`/${i.industry}/${meta.region}`} className="bg-white border border-gray-200 text-sm px-4 py-2 rounded-full hover:border-blue-400 hover:text-blue-600 transition-colors">{i.industryName} ({i.count.toLocaleString()})</Link>))}
               </div>
             </div>
           )}
@@ -301,7 +361,7 @@ export default function IndustryRegionClient({data,otherRegions,otherIndustries}
         <div className="mt-10 lg:mt-0">
           <div className="sticky top-24 space-y-4">
             <h2 className="font-semibold text-gray-900 mb-2">Useful Resources</h2>
-            {data.affiliates.map(aff=>(
+            {meta.affiliates.map(aff=>(
               <a key={aff.url} href={aff.url} target="_blank" rel="noopener noreferrer sponsored" className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-md transition-all group">
                 <div className="font-semibold text-gray-900 group-hover:text-blue-600 text-sm mb-1">{aff.label}</div>
                 <div className="text-xs text-gray-500 mb-3 leading-relaxed">{aff.description}</div>
