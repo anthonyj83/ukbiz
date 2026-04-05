@@ -11,13 +11,16 @@ export const metadata: Metadata = {
 
 const DATA_DIR = path.join(process.cwd(), "public", "data");
 
+interface Region { slug: string; name: string; }
+interface ManifestEntry { industry: string; industryName: string; region: string; regionName: string; count: number; }
+
 export default function RegionsPage() {
-  let regions = [];
-  let manifest = [];
+  let regions: Region[] = [];
+  let manifest: ManifestEntry[] = [];
   try { regions = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "regions.json"), "utf-8")); } catch {}
   try { manifest = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "manifest.json"), "utf-8")); } catch {}
 
-  const totalCompanies = manifest.reduce((s: number, m: any) => s + m.count, 0);
+  const totalCompanies = manifest.reduce((s: number, m: ManifestEntry) => s + m.count, 0);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
