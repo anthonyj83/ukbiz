@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 
 interface ManifestEntry {
@@ -43,6 +43,7 @@ function formatDate(s: string): string {
 }
 
 const AGE_ORDER=["Startup (0-2 yrs)","Early Stage (2-5 yrs)","Growing (5-10 yrs)","Established (10-20 yrs)","Veteran (20+ yrs)"];
+const DISPLAY_LIMIT = 500;
 
 export default function GlobalSearch({manifest, industries, regions}:{
   manifest: ManifestEntry[];
@@ -63,8 +64,9 @@ export default function GlobalSearch({manifest, industries, regions}:{
 
   const [allCompanies,  setAllCompanies]  = useState<Company[]>([]);
   const [loading,       setLoading]       = useState(false);
-  const [loadedPages,   setLoadedPages]   = useState<Set<string>>(new Set());
   const [hasSearched,   setHasSearched]   = useState(false);
+  const [loadProgress,  setLoadProgress]  = useState("");
+  const [displayLimit,  setDisplayLimit]  = useState(DISPLAY_LIMIT);
 
   // Which pages to load based on industry/region selection
   const pagesToLoad = useMemo(() => {
@@ -79,35 +81,53 @@ export default function GlobalSearch({manifest, industries, regions}:{
     pagesToLoad.reduce((s, m) => s + m.count, 0),
   [pagesToLoad]);
 
-  // Load company data from JSON files
+  const tooLarge = industry === "All" && region === "All";
+
+  // Load company data from paginated JSON files
   const loadData = useCallback(async () => {
+    if (tooLarge) return;
     setLoading(true);
     setHasSearched(true);
+    setDisplayLimit(DISPLAY_LIMIT);
     const companies: Company[] = [];
-    const newLoaded = new Set<string>();
+    let loaded = 0;
 
     for (const page of pagesToLoad) {
       const key = `${page.industry}__${page.region}`;
+      loaded++;
+      setLoadProgress(`Loading ${loaded} of ${pagesToLoad.length}: ${page.industryName} in ${page.regionName}...`);
+
+      // First get the meta to know how many pages exist
       try {
-        const res = await fetch(`/data/ir/${key}.json`);
-        if (!res.ok) continue;
-        const data = await res.json();
-        for (const c of data.companies) {
-          companies.push({
-            ...c,
-            _industry:     page.industry,
-            _industryName: page.industryName,
-            _region:       page.region,
-            _regionName:   page.regionName,
-          });
+        const metaRes = await fetch(`/data/ir-meta/${key}.json`);
+        if (!metaRes.ok) continue;
+        const meta = await metaRes.json();
+        const totalPages = meta.totalPages || 1;
+
+        // Load all company pages for this industry/region
+        for (let p = 0; p < totalPages; p++) {
+          try {
+            const res = await fetch(`/data/ir-pages/${key}__${p}.json`);
+            if (!res.ok) continue;
+            const chunk: any[] = await res.json();
+            for (const c of chunk) {
+              companies.push({
+                ...c,
+                _industry:     page.industry,
+                _industryName: page.industryName,
+                _region:       page.region,
+                _regionName:   page.regionName,
+              });
+            }
+          } catch {}
         }
-        newLoaded.add(key);
       } catch {}
     }
+
     setAllCompanies(companies);
-    setLoadedPages(newLoaded);
+    setLoadProgress("");
     setLoading(false);
-  }, [pagesToLoad]);
+  }, [pagesToLoad, tooLarge]);
 
   // Filter and sort
   const filtered = useMemo(() => {
@@ -141,6 +161,8 @@ export default function GlobalSearch({manifest, industries, regions}:{
     return list;
   }, [allCompanies, hasSearched, nameSearch, ageBracket, sizeClass, companyType, accountsOverdue, confStmtOverdue, hasMortgages, excludeDormant, sortBy]);
 
+  const display = filtered.slice(0, displayLimit);
+
   // Unique size classes and company types from loaded data
   const sizeClasses  = useMemo(() => [...new Set(allCompanies.map(c=>c.sizeClassification).filter(Boolean))].sort(), [allCompanies]);
   const companyTypes = useMemo(() => [...new Set(allCompanies.map(c=>c.companyType).filter(Boolean))].sort(), [allCompanies]);
@@ -167,7 +189,6 @@ export default function GlobalSearch({manifest, industries, regions}:{
   }
 
   const showTable = hasSearched && !loading;
-  const display   = filtered;
 
   return (
     <div className="space-y-6">
@@ -175,15 +196,18 @@ export default function GlobalSearch({manifest, industries, regions}:{
       <div className="bg-white border border-gray-200 rounded-2xl p-5">
         <h2 className="font-semibold text-gray-900 mb-4">Step 1 — Select scope</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-          <Sel label="Industry" value={industry} onChange={setIndustry} options={industryOpts}/>
-          <Sel label="Region"   value={region}   onChange={setRegion}   options={regionOpts}/>
+          <Sel label="Industry" value={industry} onChange={v=>{setIndustry(v);setHasSearched(false);setAllCompanies([]);}} options={industryOpts}/>
+          <Sel label="Region"   value={region}   onChange={v=>{setRegion(v);setHasSearched(false);setAllCompanies([]);}} options={regionOpts}/>
         </div>
         <div className="flex items-center justify-between">
           <p className="text-sm text-gray-500">
-            {pagesToLoad.length} page{pagesToLoad.length!==1?"s":""} · ~{totalCompaniesInScope.toLocaleString()} companies in scope
+            {tooLarge
+              ? "Please select at least one industry or region to search"
+              : `${pagesToLoad.length} page${pagesToLoad.length!==1?"s":""} · ~${totalCompaniesInScope.toLocaleString()} companies in scope`
+            }
           </p>
-          <button onClick={loadData} disabled={loading}
-            className="bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-wait text-sm">
+          <button onClick={loadData} disabled={loading || tooLarge}
+            className="bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm">
             {loading ? "Loading..." : "Load Companies →"}
           </button>
         </div>
@@ -237,7 +261,7 @@ export default function GlobalSearch({manifest, industries, regions}:{
         <div className="bg-white border border-gray-200 rounded-2xl p-12 text-center">
           <div className="text-4xl mb-4">⏳</div>
           <p className="text-gray-600 font-medium">Loading {totalCompaniesInScope.toLocaleString()} companies...</p>
-          <p className="text-sm text-gray-400 mt-1">This may take a few seconds for large datasets</p>
+          <p className="text-sm text-gray-400 mt-1">{loadProgress || "This may take a few seconds for large datasets"}</p>
         </div>
       )}
 
@@ -245,9 +269,7 @@ export default function GlobalSearch({manifest, industries, regions}:{
       {showTable && (
         <div>
           <div className="text-sm text-gray-600 mb-3">
-            {loading ? "Loading..." : (
-              <>Showing <strong>{filtered.length.toLocaleString()}</strong> matching companies</>
-            )}
+            Showing <strong>{display.length.toLocaleString()}</strong>{filtered.length > displayLimit ? ` of ${filtered.length.toLocaleString()} matching` : ""} companies
           </div>
 
           {filtered.length === 0 ? (
@@ -255,73 +277,94 @@ export default function GlobalSearch({manifest, industries, regions}:{
               No companies match your filters. <button onClick={reset} className="text-blue-600 underline">Reset</button>
             </div>
           ) : (
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead className="bg-gray-50 border-b border-gray-100">
-                    <tr>
-                      <th className="text-left px-5 py-3 font-medium text-gray-600">Company</th>
-                      <th className="text-left px-4 py-3 font-medium text-gray-600 hidden sm:table-cell">Industry</th>
-                      <th className="text-left px-4 py-3 font-medium text-gray-600 hidden md:table-cell">Town</th>
-                      <th className="text-left px-4 py-3 font-medium text-gray-600 hidden lg:table-cell">Incorporated</th>
-                      <th className="text-left px-4 py-3 font-medium text-gray-600 hidden lg:table-cell">Size</th>
-                      <th className="text-left px-4 py-3 font-medium text-gray-600">Flags</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-50">
-                    {display.map((c, i) => (
-                      <tr key={`${c.number||i}-${c._industry}`} className="hover:bg-gray-50 transition-colors">
-                        <td className="px-5 py-3.5">
-                          <a href={c.number
-                              ? `https://find-and-update.company-information.service.gov.uk/company/${c.number}`
-                              : `https://find-and-update.company-information.service.gov.uk/search?q=${encodeURIComponent(c.name)}`}
-                            target="_blank" rel="noopener noreferrer"
-                            className="font-medium text-gray-900 hover:text-blue-600 block">{c.name}</a>
-                          {c.hasPreviousName && <div className="text-xs text-gray-400">Prev: {c.previousName}</div>}
-                          <div className="text-xs text-gray-400 font-mono">{c.number}</div>
-                        </td>
-                        <td className="px-4 py-3.5 hidden sm:table-cell">
-                          <Link href={`/${c._industry}/${c._region}`} className="text-xs text-blue-600 hover:underline">{c._industryName}</Link>
-                          <div className="text-xs text-gray-400">{c._regionName}</div>
-                        </td>
-                        <td className="px-4 py-3.5 text-gray-500 hidden md:table-cell">
-                          <div>{c.postTown||"—"}</div>
-                          <div className="text-xs text-gray-400">{c.postcode}</div>
-                        </td>
-                        <td className="px-4 py-3.5 text-gray-500 hidden lg:table-cell">{formatDate(c.incorporated)}</td>
-                        <td className="px-4 py-3.5 hidden lg:table-cell">
-                          {c.sizeClassification && !["Unknown","Not Yet Filed"].includes(c.sizeClassification) ? (
-                            <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">{c.sizeClassification}</span>
-                          ) : <span className="text-gray-300">—</span>}
-                        </td>
-                        <td className="px-4 py-3.5">
-                          <div className="flex flex-wrap gap-1">
-                            {c.accountsOverdue && <Tag label="Accts ⚠️"    colour="red"/>}
-                            {c.confStmtOverdue && <Tag label="ConfStmt ⚠️" colour="amber"/>}
-                            {c.isDormant       && <Tag label="Dormant"      colour="gray"/>}
-                            {c.isOverseas      && <Tag label="Overseas"     colour="purple"/>}
-                            {c.isLP            && <Tag label="LP/LLP"       colour="blue"/>}
-                            {c.numMortgages>0  && <Tag label={`${c.numMortgages} charge${c.numMortgages>1?"s":""}`} colour="blue"/>}
-                            {c.numMortSatisfied>0 && <Tag label={`${c.numMortSatisfied} satisfied`} colour="green"/>}
-                            {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0 && <Tag label="Clean ✓" colour="green"/>}
-                          </div>
-                        </td>
+            <>
+              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead className="bg-gray-50 border-b border-gray-100">
+                      <tr>
+                        <th className="text-left px-5 py-3 font-medium text-gray-600">Company</th>
+                        <th className="text-left px-4 py-3 font-medium text-gray-600 hidden sm:table-cell">Industry</th>
+                        <th className="text-left px-4 py-3 font-medium text-gray-600 hidden md:table-cell">Town</th>
+                        <th className="text-left px-4 py-3 font-medium text-gray-600 hidden lg:table-cell">Incorporated</th>
+                        <th className="text-left px-4 py-3 font-medium text-gray-600 hidden lg:table-cell">Size</th>
+                        <th className="text-left px-4 py-3 font-medium text-gray-600">Flags</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-gray-50">
+                      {display.map((c, i) => (
+                        <tr key={`${c.number||i}-${c._industry}`} className="hover:bg-gray-50 transition-colors">
+                          <td className="px-5 py-3.5">
+                            <a href={c.number
+                                ? `https://find-and-update.company-information.service.gov.uk/company/${c.number}`
+                                : `https://find-and-update.company-information.service.gov.uk/search?q=${encodeURIComponent(c.name)}`}
+                              target="_blank" rel="noopener noreferrer"
+                              className="font-medium text-gray-900 hover:text-blue-600 block">{c.name}</a>
+                            {c.hasPreviousName && <div className="text-xs text-gray-400">Prev: {c.previousName}</div>}
+                            <div className="text-xs text-gray-400 font-mono">{c.number}</div>
+                          </td>
+                          <td className="px-4 py-3.5 hidden sm:table-cell">
+                            <Link href={`/${c._industry}/${c._region}`} className="text-xs text-blue-600 hover:underline">{c._industryName}</Link>
+                            <div className="text-xs text-gray-400">{c._regionName}</div>
+                          </td>
+                          <td className="px-4 py-3.5 text-gray-500 hidden md:table-cell">
+                            <div>{c.postTown||"—"}</div>
+                            <div className="text-xs text-gray-400">{c.postcode}</div>
+                          </td>
+                          <td className="px-4 py-3.5 text-gray-500 hidden lg:table-cell">{formatDate(c.incorporated)}</td>
+                          <td className="px-4 py-3.5 hidden lg:table-cell">
+                            {c.sizeClassification && !["Unknown","Not Yet Filed"].includes(c.sizeClassification) ? (
+                              <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">{c.sizeClassification}</span>
+                            ) : <span className="text-gray-300">—</span>}
+                          </td>
+                          <td className="px-4 py-3.5">
+                            <div className="flex flex-wrap gap-1">
+                              {c.accountsOverdue && <Tag label="Accts ⚠️"    colour="red"/>}
+                              {c.confStmtOverdue && <Tag label="ConfStmt ⚠️" colour="amber"/>}
+                              {c.isDormant       && <Tag label="Dormant"      colour="gray"/>}
+                              {c.isOverseas      && <Tag label="Overseas"     colour="purple"/>}
+                              {c.isLP            && <Tag label="LP/LLP"       colour="blue"/>}
+                              {c.numMortgages>0  && <Tag label={`${c.numMortgages} charge${c.numMortgages>1?"s":""}`} colour="blue"/>}
+                              {c.numMortSatisfied>0 && <Tag label={`${c.numMortSatisfied} satisfied`} colour="green"/>}
+                              {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0 && <Tag label="Clean ✓" colour="green"/>}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
+
+              {filtered.length > displayLimit && (
+                <div className="text-center mt-4">
+                  <button
+                    onClick={() => setDisplayLimit(prev => prev + DISPLAY_LIMIT)}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors">
+                    Show {Math.min(DISPLAY_LIMIT, filtered.length - displayLimit).toLocaleString()} more ({filtered.length - displayLimit} remaining)
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       )}
 
       {/* Not yet searched state */}
-      {!hasSearched && (
+      {!hasSearched && !tooLarge && (
         <div className="bg-white border border-gray-200 rounded-2xl p-12 text-center text-gray-400">
           <div className="text-4xl mb-3">🔍</div>
           <p className="font-medium text-gray-600">Select an industry and/or region above, then click Load Companies</p>
-          <p className="text-sm mt-1">Or leave both as "All" to search the entire dataset</p>
+          <p className="text-sm mt-1">Or browse directly from the <Link href="/industries" className="text-blue-600 underline">industries</Link> or <Link href="/regions" className="text-blue-600 underline">regions</Link> pages</p>
+        </div>
+      )}
+
+      {!hasSearched && tooLarge && (
+        <div className="bg-white border border-gray-200 rounded-2xl p-12 text-center text-gray-400">
+          <div className="text-4xl mb-3">🔍</div>
+          <p className="font-medium text-gray-600">Please select at least one industry or region to search</p>
+          <p className="text-sm mt-1">The full dataset has {totalCompaniesInScope.toLocaleString()} companies — pick a scope to narrow it down</p>
+          <p className="text-sm mt-3">Or browse directly from the <Link href="/industries" className="text-blue-600 underline">industries</Link> or <Link href="/regions" className="text-blue-600 underline">regions</Link> pages</p>
         </div>
       )}
     </div>
