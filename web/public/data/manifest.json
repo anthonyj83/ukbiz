@@ -1,0 +1,4034 @@
+[
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "london",
+    "regionName": "London",
+    "count": 1162
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 214
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 269
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 329
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 304
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 68
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 183
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 250
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 220
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 394
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 109
+  },
+  {
+    "industry": "photography",
+    "industryName": "Photography & Videography",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 32
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 9551
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 10944
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 36913
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 3382
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 15795
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 7079
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 9264
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 14044
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 12356
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 3196
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1738
+  },
+  {
+    "industry": "healthcare",
+    "industryName": "Healthcare Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 4624
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "london",
+    "regionName": "London",
+    "count": 83257
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 33260
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 14416
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 10180
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 19107
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 16255
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 14969
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 10310
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 22620
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 4728
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 2248
+  },
+  {
+    "industry": "management-consulting",
+    "industryName": "Management Consultancy",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 5550
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 7967
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "london",
+    "regionName": "London",
+    "count": 23971
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2034
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4023
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 5150
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 3350
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 3449
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 4422
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 2555
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1012
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 554
+  },
+  {
+    "industry": "it-services",
+    "industryName": "IT Services & Support",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1637
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "london",
+    "regionName": "London",
+    "count": 9418
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1339
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 1043
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1427
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1406
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2546
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1360
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 653
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 496
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 2040
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1149
+  },
+  {
+    "industry": "arts",
+    "industryName": "Arts & Entertainment",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 283
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3220
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4259
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1564
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "london",
+    "regionName": "London",
+    "count": 24464
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 4330
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1697
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 7467
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 5042
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 6268
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 941
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 4631
+  },
+  {
+    "industry": "property-management",
+    "industryName": "Property Management",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1920
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 20516
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "london",
+    "regionName": "London",
+    "count": 99281
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 24777
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 10330
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 14948
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 26354
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 5972
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 16242
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 10451
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 16824
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 3160
+  },
+  {
+    "industry": "property",
+    "industryName": "Property & Real Estate",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 6062
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "london",
+    "regionName": "London",
+    "count": 30484
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 7132
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 9598
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 6195
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 7348
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 7234
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 5507
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 9555
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1783
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 2817
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 3498
+  },
+  {
+    "industry": "restaurants",
+    "industryName": "Restaurants & Cafes",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 5441
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "london",
+    "regionName": "London",
+    "count": 19161
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 5195
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 2862
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 3034
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 888
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1288
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 2011
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1550
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 2759
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 4705
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 2477
+  },
+  {
+    "industry": "marketing",
+    "industryName": "Marketing & Advertising",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 432
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 26267
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 7220
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 6496
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 7454
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 3513
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 12122
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 9580
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 13390
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 3175
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 9522
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 9336
+  },
+  {
+    "industry": "building-services",
+    "industryName": "Building Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1757
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 4193
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "london",
+    "regionName": "London",
+    "count": 9360
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 4624
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 6484
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4077
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 4130
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 3458
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2991
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 2846
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1321
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1590
+  },
+  {
+    "industry": "plumbing",
+    "industryName": "Plumbing & Heating",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 663
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 18561
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 5071
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "london",
+    "regionName": "London",
+    "count": 72830
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 27861
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 16228
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 19689
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 12405
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 7187
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 16737
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 4608
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 15021
+  },
+  {
+    "industry": "construction",
+    "industryName": "Construction",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 8772
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "london",
+    "regionName": "London",
+    "count": 6708
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1025
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2403
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1931
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1494
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 1264
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1275
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 695
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1477
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1968
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 167
+  },
+  {
+    "industry": "cleaning",
+    "industryName": "Commercial Cleaning",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 446
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "london",
+    "regionName": "London",
+    "count": 2111
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 460
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 693
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 823
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 492
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 606
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 483
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 148
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 553
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 159
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 180
+  },
+  {
+    "industry": "schools",
+    "industryName": "Schools & Education",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 57
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "london",
+    "regionName": "London",
+    "count": 12946
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 13155
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 7331
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 2826
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1862
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1174
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 7629
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 5329
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 8437
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 6280
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2386
+  },
+  {
+    "industry": "transport",
+    "industryName": "Road Transport & Haulage",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1307
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "london",
+    "regionName": "London",
+    "count": 3514
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 652
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 522
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 927
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 288
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 322
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 524
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 440
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 423
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 66
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 248
+  },
+  {
+    "industry": "data-services",
+    "industryName": "Data Processing & Hosting",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 150
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "london",
+    "regionName": "London",
+    "count": 10652
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 3785
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 815
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1491
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 2274
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 2864
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 2857
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 254
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 2204
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 661
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 2361
+  },
+  {
+    "industry": "recruitment",
+    "industryName": "Recruitment & Staffing",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1052
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 7305
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2335
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 2368
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1548
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1136
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 761
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 743
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1620
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 1431
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1731
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 261
+  },
+  {
+    "industry": "security",
+    "industryName": "Security Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 512
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 6137
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2971
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "london",
+    "regionName": "London",
+    "count": 17577
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1393
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 4015
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 2327
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 762
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1163
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1675
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 2542
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3120
+  },
+  {
+    "industry": "wholesale",
+    "industryName": "Wholesale & Distribution",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 633
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 1397
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "london",
+    "regionName": "London",
+    "count": 2232
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1396
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1166
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 883
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1578
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1005
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1808
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1614
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 585
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 215
+  },
+  {
+    "industry": "accommodation",
+    "industryName": "Guesthouses & B&Bs",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 620
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "london",
+    "regionName": "London",
+    "count": 17627
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1542
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 2834
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3340
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 3333
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 3071
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2634
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 5238
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 4118
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 4775
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1077
+  },
+  {
+    "industry": "catering",
+    "industryName": "Event Catering",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 601
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 502
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 743
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "london",
+    "regionName": "London",
+    "count": 2078
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 675
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 213
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1257
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 290
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 576
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 734
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 188
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 318
+  },
+  {
+    "industry": "pharmacy",
+    "industryName": "Pharmacy & Health Retail",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 253
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 14242
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 6425
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "london",
+    "regionName": "London",
+    "count": 83544
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 7347
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 10782
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 10983
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 11141
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 20136
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 6517
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 13616
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 3308
+  },
+  {
+    "industry": "ecommerce",
+    "industryName": "Online Retail & E-commerce",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 4245
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 5248
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "london",
+    "regionName": "London",
+    "count": 21823
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 8896
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 3751
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 5307
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 2577
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 6826
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 3362
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 6020
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 5676
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1213
+  },
+  {
+    "industry": "retail",
+    "industryName": "General Retail",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1886
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 2935
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 5501
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 3353
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "london",
+    "regionName": "London",
+    "count": 18347
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 3304
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 3791
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1645
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1353
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 3363
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 609
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 5146
+  },
+  {
+    "industry": "training",
+    "industryName": "Professional Training",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2117
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 2462
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "london",
+    "regionName": "London",
+    "count": 20327
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 5794
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 4885
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 8537
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 2363
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 3754
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4605
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 5926
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 4512
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 7299
+  },
+  {
+    "industry": "beauty",
+    "industryName": "Hair & Beauty",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1008
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 539
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 853
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 620
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "london",
+    "regionName": "London",
+    "count": 3313
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 890
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 230
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 778
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1237
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 791
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 398
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 310
+  },
+  {
+    "industry": "vehicle-hire",
+    "industryName": "Vehicle Hire & Leasing",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 182
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "london",
+    "regionName": "London",
+    "count": 48330
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 6249
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 6413
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 3940
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1678
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 5101
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 10980
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 2857
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3824
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 7922
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1249
+  },
+  {
+    "industry": "software",
+    "industryName": "Software Development",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 5606
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 861
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 712
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 869
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2187
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "london",
+    "regionName": "London",
+    "count": 6599
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 850
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 547
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 102
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1011
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 508
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 334
+  },
+  {
+    "industry": "pr",
+    "industryName": "PR & Communications",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 233
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 7456
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "london",
+    "regionName": "London",
+    "count": 54872
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 19100
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 5772
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 11497
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 9059
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 4883
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 2000
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 10489
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 3226
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 7730
+  },
+  {
+    "industry": "it-consulting",
+    "industryName": "IT Consulting",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1182
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "london",
+    "regionName": "London",
+    "count": 2727
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 738
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 1338
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 339
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 511
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 942
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 672
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 746
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 368
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 726
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 197
+  },
+  {
+    "industry": "research",
+    "industryName": "Research & Development",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 114
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 9699
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 4785
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "london",
+    "regionName": "London",
+    "count": 20211
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 4813
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3243
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 5465
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 7795
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 2051
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 4905
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4984
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 833
+  },
+  {
+    "industry": "consultancy",
+    "industryName": "Business Consultancy",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 2025
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 7374
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 4603
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 3907
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "london",
+    "regionName": "London",
+    "count": 18327
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1105
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 3958
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2356
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 5343
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 3691
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3369
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 758
+  },
+  {
+    "industry": "accounting",
+    "industryName": "Accounting & Bookkeeping",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 1591
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 673
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 2027
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1654
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "london",
+    "regionName": "London",
+    "count": 3644
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2487
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 1094
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1496
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1108
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1704
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1299
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 381
+  },
+  {
+    "industry": "sports",
+    "industryName": "Sports & Leisure Facilities",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 882
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "london",
+    "regionName": "London",
+    "count": 3015
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 560
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1934
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 3701
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1771
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 747
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1417
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1693
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1963
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 2136
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 1150
+  },
+  {
+    "industry": "landscaping",
+    "industryName": "Landscaping & Grounds Maintenance",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 244
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 5289
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 5999
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 11398
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 4022
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 3657
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 2017
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 7615
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 3464
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 2071
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4982
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1159
+  },
+  {
+    "industry": "electrical",
+    "industryName": "Electrical Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 5021
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 2485
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 5440
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "london",
+    "regionName": "London",
+    "count": 10657
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 4766
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 7725
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 6226
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 7100
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 1028
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 7884
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 4049
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 1856
+  },
+  {
+    "industry": "automotive",
+    "industryName": "Car Sales & Automotive",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 4718
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 900
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1172
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "london",
+    "regionName": "London",
+    "count": 3031
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 456
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 572
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 776
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 762
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 229
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 717
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 204
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 431
+  },
+  {
+    "industry": "childcare",
+    "industryName": "Childcare & Day Nurseries",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 348
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 3741
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 730
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 173
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 453
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 904
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 1071
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 639
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 641
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 421
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 637
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 378
+  },
+  {
+    "industry": "financial-services",
+    "industryName": "Financial Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 117
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1278
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "london",
+    "regionName": "London",
+    "count": 6137
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1036
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2747
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1560
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1658
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 936
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1655
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 417
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1393
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 149
+  },
+  {
+    "industry": "taxis",
+    "industryName": "Taxis & Private Hire",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 537
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 765
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 819
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 438
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 293
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 441
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 467
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 767
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 282
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 646
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "london",
+    "regionName": "London",
+    "count": 940
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 716
+  },
+  {
+    "industry": "manufacturing",
+    "industryName": "Manufacturing & Fabrication",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 241
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1787
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "london",
+    "regionName": "London",
+    "count": 2456
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 559
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1149
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 1253
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 965
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 2238
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 587
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1370
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 1174
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1412
+  },
+  {
+    "industry": "roofing",
+    "industryName": "Roofing & Waterproofing",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 155
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 1245
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 2164
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "london",
+    "regionName": "London",
+    "count": 5912
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 1257
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 2189
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 1687
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 560
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 1486
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 813
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 881
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 330
+  },
+  {
+    "industry": "hotels",
+    "industryName": "Hotels & Accommodation",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 989
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 415
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 4210
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 761
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 868
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 1273
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 759
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 966
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 684
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1867
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 611
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 266
+  },
+  {
+    "industry": "legal",
+    "industryName": "Legal Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 278
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 592
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "london",
+    "regionName": "London",
+    "count": 1919
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 803
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 917
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 491
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 628
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 216
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 352
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 489
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 540
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 375
+  },
+  {
+    "industry": "waste-management",
+    "industryName": "Waste Management & Recycling",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 105
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 426
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 260
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 39
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "london",
+    "regionName": "London",
+    "count": 2397
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 241
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 209
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 336
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 144
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 234
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 88
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 84
+  },
+  {
+    "industry": "insurance",
+    "industryName": "Insurance",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 58
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 428
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 312
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 371
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 304
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 262
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 350
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 202
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 180
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 283
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 440
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 96
+  },
+  {
+    "industry": "funeral",
+    "industryName": "Funeral Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 124
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "south-east",
+    "regionName": "South East England",
+    "count": 716
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "scotland",
+    "regionName": "Scotland",
+    "count": 362
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "west-midlands",
+    "regionName": "West Midlands",
+    "count": 266
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "east-england",
+    "regionName": "East of England",
+    "count": 439
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "south-west",
+    "regionName": "South West England",
+    "count": 605
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "north-west",
+    "regionName": "North West England",
+    "count": 1044
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "yorkshire",
+    "regionName": "Yorkshire & Humber",
+    "count": 507
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "east-midlands",
+    "regionName": "East Midlands",
+    "count": 435
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "london",
+    "regionName": "London",
+    "count": 649
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "north-east",
+    "regionName": "North East England",
+    "count": 119
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "wales",
+    "regionName": "Wales",
+    "count": 203
+  },
+  {
+    "industry": "veterinary",
+    "industryName": "Veterinary Services",
+    "region": "northern-ireland",
+    "regionName": "Northern Ireland",
+    "count": 131
+  }
+]

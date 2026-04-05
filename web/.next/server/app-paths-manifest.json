@@ -1,0 +1,7 @@
+{
+  "/region/[region]/page": "app/region/[region]/page.js",
+  "/search/page": "app/search/page.js",
+  "/page": "app/page.js",
+  "/[industry]/[region]/page": "app/[industry]/[region]/page.js",
+  "/regions/page": "app/regions/page.js"
+}

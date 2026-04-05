@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "east-england",
+    "name": "East of England"
+  },
+  {
+    "slug": "east-midlands",
+    "name": "East Midlands"
+  },
+  {
+    "slug": "london",
+    "name": "London"
+  },
+  {
+    "slug": "north-east",
+    "name": "North East England"
+  },
+  {
+    "slug": "north-west",
+    "name": "North West England"
+  },
+  {
+    "slug": "northern-ireland",
+    "name": "Northern Ireland"
+  },
+  {
+    "slug": "scotland",
+    "name": "Scotland"
+  },
+  {
+    "slug": "south-east",
+    "name": "South East England"
+  },
+  {
+    "slug": "south-west",
+    "name": "South West England"
+  },
+  {
+    "slug": "wales",
+    "name": "Wales"
+  },
+  {
+    "slug": "west-midlands",
+    "name": "West Midlands"
+  },
+  {
+    "slug": "yorkshire",
+    "name": "Yorkshire & Humber"
+  }
+]

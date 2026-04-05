@@ -1,0 +1,770 @@
+[
+  {
+    "slug": "property",
+    "name": "Property & Real Estate",
+    "totalCompanies": 254917,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "east-midlands",
+      "west-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "management-consulting",
+    "name": "Management Consultancy",
+    "totalCompanies": 236900,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "construction",
+    "name": "Construction",
+    "totalCompanies": 224970,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "ecommerce",
+    "name": "Online Retail & E-commerce",
+    "totalCompanies": 192286,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "it-consulting",
+    "name": "IT Consulting",
+    "totalCompanies": 137266,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "healthcare",
+    "name": "Healthcare Services",
+    "totalCompanies": 128886,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "payroll-software"
+    ]
+  },
+  {
+    "slug": "building-services",
+    "name": "Building Services",
+    "totalCompanies": 109832,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "software",
+    "name": "Software Development",
+    "totalCompanies": 104149,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-banking",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "restaurants",
+    "name": "Restaurants & Cafes",
+    "totalCompanies": 96592,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "yorkshire",
+      "scotland"
+    ],
+    "affiliates": [
+      "pos-software",
+      "business-insurance"
+    ]
+  },
+  {
+    "slug": "retail",
+    "name": "General Retail",
+    "totalCompanies": 72585,
+    "topRegions": [
+      "london",
+      "north-west",
+      "east-midlands",
+      "south-east",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "beauty",
+    "name": "Hair & Beauty",
+    "totalCompanies": 71472,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "pos-software",
+      "business-insurance"
+    ]
+  },
+  {
+    "slug": "consultancy",
+    "name": "Business Consultancy",
+    "totalCompanies": 70809,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "transport",
+    "name": "Road Transport & Haulage",
+    "totalCompanies": 70662,
+    "topRegions": [
+      "east-midlands",
+      "london",
+      "west-midlands",
+      "yorkshire",
+      "north-west"
+    ],
+    "affiliates": [
+      "vehicle-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "property-management",
+    "name": "Property Management",
+    "totalCompanies": 65803,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "south-west",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "automotive",
+    "name": "Car Sales & Automotive",
+    "totalCompanies": 63934,
+    "topRegions": [
+      "london",
+      "east-midlands",
+      "south-east",
+      "north-west",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "it-services",
+    "name": "IT Services & Support",
+    "totalCompanies": 60124,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "electrical",
+    "name": "Electrical Services",
+    "totalCompanies": 56694,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "accounting",
+    "name": "Accounting & Bookkeeping",
+    "totalCompanies": 56382,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "accounting-software",
+      "business-banking"
+    ]
+  },
+  {
+    "slug": "training",
+    "name": "Professional Training",
+    "totalCompanies": 51464,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "catering",
+    "name": "Event Catering",
+    "totalCompanies": 50190,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "west-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "marketing",
+    "name": "Marketing & Advertising",
+    "totalCompanies": 46362,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-england",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "plumbing",
+    "name": "Plumbing & Heating",
+    "totalCompanies": 45737,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "wholesale",
+    "name": "Wholesale & Distribution",
+    "totalCompanies": 44315,
+    "topRegions": [
+      "london",
+      "north-west",
+      "east-midlands",
+      "west-midlands",
+      "south-east"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "recruitment",
+    "name": "Recruitment & Staffing",
+    "totalCompanies": 31270,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "west-midlands"
+    ],
+    "affiliates": [
+      "hr-software",
+      "payroll-software"
+    ]
+  },
+  {
+    "slug": "arts",
+    "name": "Arts & Entertainment",
+    "totalCompanies": 23160,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "south-west",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "security",
+    "name": "Security Services",
+    "totalCompanies": 21751,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "cleaning",
+    "name": "Commercial Cleaning",
+    "totalCompanies": 20853,
+    "topRegions": [
+      "london",
+      "south-east",
+      "east-midlands",
+      "north-west",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "payroll-software"
+    ]
+  },
+  {
+    "slug": "landscaping",
+    "name": "Landscaping & Grounds Maintenance",
+    "totalCompanies": 20331,
+    "topRegions": [
+      "south-east",
+      "london",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "vehicle-insurance"
+    ]
+  },
+  {
+    "slug": "hotels",
+    "name": "Hotels & Accommodation",
+    "totalCompanies": 19513,
+    "topRegions": [
+      "london",
+      "scotland",
+      "north-west",
+      "south-east",
+      "south-west"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "taxis",
+    "name": "Taxis & Private Hire",
+    "totalCompanies": 19503,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "scotland",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "sports",
+    "name": "Sports & Leisure Facilities",
+    "totalCompanies": 18449,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "roofing",
+    "name": "Roofing & Waterproofing",
+    "totalCompanies": 15105,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "pr",
+    "name": "PR & Communications",
+    "totalCompanies": 14813,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "south-west",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "accommodation",
+    "name": "Guesthouses & B&Bs",
+    "totalCompanies": 14499,
+    "topRegions": [
+      "london",
+      "south-west",
+      "scotland",
+      "north-west",
+      "south-east"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "legal",
+    "name": "Legal Services",
+    "totalCompanies": 12958,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "yorkshire",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "legal-software",
+      "business-banking"
+    ]
+  },
+  {
+    "slug": "vehicle-hire",
+    "name": "Vehicle Hire & Leasing",
+    "totalCompanies": 10141,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "yorkshire",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "financial-services",
+    "name": "Financial Services",
+    "totalCompanies": 9905,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "childcare",
+    "name": "Childcare & Day Nurseries",
+    "totalCompanies": 9598,
+    "topRegions": [
+      "london",
+      "north-west",
+      "south-east",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "payroll-software",
+      "business-insurance"
+    ]
+  },
+  {
+    "slug": "research",
+    "name": "Research & Development",
+    "totalCompanies": 9418,
+    "topRegions": [
+      "london",
+      "south-east",
+      "east-england",
+      "north-west",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "data-services",
+    "name": "Data Processing & Hosting",
+    "totalCompanies": 8076,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "pharmacy",
+    "name": "Pharmacy & Health Retail",
+    "totalCompanies": 7827,
+    "topRegions": [
+      "london",
+      "north-west",
+      "yorkshire",
+      "west-midlands",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "waste-management",
+    "name": "Waste Management & Recycling",
+    "totalCompanies": 7427,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "yorkshire",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "manufacturing",
+    "name": "Manufacturing & Fabrication",
+    "totalCompanies": 6815,
+    "topRegions": [
+      "london",
+      "yorkshire",
+      "east-midlands",
+      "north-west",
+      "west-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "schools",
+    "name": "Schools & Education",
+    "totalCompanies": 6765,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "veterinary",
+    "name": "Veterinary Services",
+    "totalCompanies": 5476,
+    "topRegions": [
+      "north-west",
+      "south-east",
+      "london",
+      "south-west",
+      "yorkshire"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "insurance",
+    "name": "Insurance",
+    "totalCompanies": 4516,
+    "topRegions": [
+      "london",
+      "south-east",
+      "east-midlands",
+      "north-west",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "photography",
+    "name": "Photography & Videography",
+    "totalCompanies": 3534,
+    "topRegions": [
+      "london",
+      "south-east",
+      "north-west",
+      "east-midlands",
+      "east-england"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  },
+  {
+    "slug": "funeral",
+    "name": "Funeral Services",
+    "totalCompanies": 3352,
+    "topRegions": [
+      "north-west",
+      "london",
+      "south-east",
+      "yorkshire",
+      "east-midlands"
+    ],
+    "affiliates": [
+      "business-insurance",
+      "accounting-software"
+    ]
+  }
+]
