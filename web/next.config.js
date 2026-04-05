@@ -10,8 +10,6 @@ const nextConfig = {
   compress: true,
   trailingSlash: false,
   poweredByHeader: false,
-};
-  // Generate sitemap-friendly structure
   async headers() {
     return [
       {
