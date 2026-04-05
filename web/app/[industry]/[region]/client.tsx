@@ -40,7 +40,7 @@ interface MetaData {
 }
 
 function formatDate(s: string): string {
-  if (!s) return "\u2014";
+  if (!s) return "—";
   try { const p = s.split("/"); if (p.length===3) return new Date(`${p[2]}-${p[1]}-${p[0]}`).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}); } catch {}
   return s;
 }
@@ -62,7 +62,7 @@ function Sel({label,value,onChange,options}:{label:string;value:string;onChange:
 }
 
 function Tog({label,active,onClick}:{label:string;active:boolean;onClick:()=>void}) {
-  return <button onClick={onClick} className={`text-sm px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap ${active?"bg-blue-600 text-white border-blue-600":"bg-white text-gray-700 border-gray-300 hover:border-blue-400"}`}>{active?"\u2713 ":""}{label}</button>;
+  return <button onClick={onClick} className={`text-sm px-3 py-1.5 rounded-full border transition-colors whitespace-nowrap ${active?"bg-blue-600 text-white border-blue-600":"bg-white text-gray-700 border-gray-300 hover:border-blue-400"}`}>{active?"✓ ":""}{label}</button>;
 }
 
 const AGE_ORDER=["Startup (0-2 yrs)","Early Stage (2-5 yrs)","Growing (5-10 yrs)","Established (10-20 yrs)","Veteran (20+ yrs)","Unknown"];
@@ -211,7 +211,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
   const ageOpts=[{value:"All",label:"All ages"},...AGE_ORDER.filter(b=>(s.ageBrackets?.[b]??0)>0).map(b=>({value:b,label:`${b} (${(s.ageBrackets?.[b]||0).toLocaleString()})`}))];
   const sizeOpts=[{value:"All",label:"All sizes"},...Object.entries(s.sizeClassifications||{}).sort((a,b)=>b[1]-a[1]).map(([x,n])=>({value:x,label:`${x} (${n.toLocaleString()})`}))];
   const typeOpts=[{value:"All",label:"All types"},...Object.entries(s.companyTypes||{}).sort((a,b)=>b[1]-a[1]).map(([t,n])=>({value:t,label:`${t} (${n.toLocaleString()})`}))];
-  const sortOpts=[{value:"newest",label:"Newest first"},{value:"oldest",label:"Oldest first"},{value:"name",label:"Name A\u2013Z"},{value:"age-desc",label:"Oldest companies first"},{value:"age-asc",label:"Youngest companies first"},{value:"mortgages",label:"Most charges"}];
+  const sortOpts=[{value:"newest",label:"Newest first"},{value:"oldest",label:"Oldest first"},{value:"name",label:"Name A–Z"},{value:"age-desc",label:"Oldest companies first"},{value:"age-asc",label:"Youngest companies first"},{value:"mortgages",label:"Most charges"}];
 
   // Pagination controls
   const totalPages = meta.totalPages;
@@ -235,7 +235,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            {[{label:"Total",value:meta.count.toLocaleString()},{label:"Avg Age (yrs)",value:s.averageAgeYears??"\u2014"},{label:"Accts Overdue",value:(s.accountsOverdueCount||0).toLocaleString()},{label:"With Charges",value:(s.withMortgagesCount||0).toLocaleString()}].map(x=>(
+            {[{label:"Total",value:meta.count.toLocaleString()},{label:"Avg Age (yrs)",value:s.averageAgeYears??"—"},{label:"Accts Overdue",value:(s.accountsOverdueCount||0).toLocaleString()},{label:"With Charges",value:(s.withMortgagesCount||0).toLocaleString()}].map(x=>(
               <div key={x.label} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
                 <div className="text-xl font-bold text-blue-600">{x.value}</div>
                 <div className="text-xs text-gray-500 mt-1">{x.label}</div>
@@ -294,7 +294,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
               loadingAll ? "Loading data for filtering..." :
               <>Showing <strong>{Math.min(filteredDisplayLimit, totalFiltered).toLocaleString()}</strong> of <strong>{totalFiltered.toLocaleString()}</strong> matching companies</>
             ) : (
-              <>Page <strong>{currentPage + 1}</strong> of {totalPages.toLocaleString()} · Companies {pageStart.toLocaleString()}\u2013{pageEnd.toLocaleString()} of {meta.count.toLocaleString()}</>
+              <>Page <strong>{currentPage + 1}</strong> of {totalPages.toLocaleString()} · Companies {pageStart.toLocaleString()}–{pageEnd.toLocaleString()} of {meta.count.toLocaleString()}</>
             )}
           </div>
 
@@ -327,26 +327,26 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                           <div className="text-xs text-gray-400 font-mono">{c.number}</div>
                         </td>
                         <td className="px-4 py-3.5 text-gray-500 hidden sm:table-cell">
-                          <div>{c.postTown||"\u2014"}</div>
+                          <div>{c.postTown||"—"}</div>
                           <div className="text-xs text-gray-400">{c.postcode}</div>
                         </td>
                         <td className="px-4 py-3.5 text-gray-500 hidden md:table-cell">{formatDate(c.incorporated)}</td>
-                        <td className="px-4 py-3.5 text-gray-500 hidden lg:table-cell">{c.ageYears!=null?`${c.ageYears}y`:"\u2014"}</td>
+                        <td className="px-4 py-3.5 text-gray-500 hidden lg:table-cell">{c.ageYears!=null?`${c.ageYears}y`:"—"}</td>
                         <td className="px-4 py-3.5 hidden lg:table-cell">
                           {c.sizeClassification&&!["Unknown","Not Yet Filed"].includes(c.sizeClassification)?(
                             <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">{c.sizeClassification}</span>
-                          ):<span className="text-gray-300">{"\u2014"}</span>}
+                          ):<span className="text-gray-300">{"—"}</span>}
                         </td>
                         <td className="px-4 py-3.5">
                           <div className="flex flex-wrap gap-1">
-                            {c.accountsOverdue&&<Tag label="Accts \u26a0\ufe0f" colour="red"/>}
-                            {c.confStmtOverdue&&<Tag label="ConfStmt \u26a0\ufe0f" colour="amber"/>}
+                            {c.accountsOverdue&&<Tag label="Accts ⚠️" colour="red"/>}
+                            {c.confStmtOverdue&&<Tag label="ConfStmt ⚠️" colour="amber"/>}
                             {c.isDormant&&<Tag label="Dormant" colour="gray"/>}
                             {c.isOverseas&&<Tag label="Overseas" colour="purple"/>}
                             {c.isLP&&<Tag label="LP/LLP" colour="blue"/>}
                             {c.numMortgages>0&&<Tag label={`${c.numMortgages} charge${c.numMortgages>1?"s":""}`} colour="blue"/>}
                             {c.numMortSatisfied>0&&<Tag label={`${c.numMortSatisfied} satisfied`} colour="green"/>}
-                            {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0&&<Tag label="Clean \u2713" colour="green"/>}
+                            {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0&&<Tag label="Clean ✓" colour="green"/>}
                           </div>
                         </td>
                       </tr>
