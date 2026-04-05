@@ -12,8 +12,8 @@ interface ManifestEntry {
 const REGION_ICONS: Record<string, string> = {
   "london":"🏙️","south-east":"🌳","south-west":"🌊","east-midlands":"🏭",
   "west-midlands":"🏗️","east-england":"🌾","yorkshire":"⚒️",
-  "north-west":"🏙️","north-east":"⚓","scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-  "wales":"🏴󠁧󠁢󠁷󠁬󠁳󠁿","northern-ireland":"🟢",
+  "north-west":"🏙️","north-east":"⚓","scotland":"🏔️",
+  "wales":"🐉","northern-ireland":"☘️",
 };
 
 export default function RegionsSearch({
