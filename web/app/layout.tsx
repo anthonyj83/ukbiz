@@ -32,12 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
-        {/* Google AdSense — replace ca-pub-XXXXXXXXXX with your publisher ID */}
-        {/* <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
-          crossOrigin="anonymous"
-        /> */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2730052069594489" crossOrigin="anonymous" />
 
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
