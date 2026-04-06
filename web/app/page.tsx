@@ -124,8 +124,8 @@ export default function HomePage() {
               <div>Regions</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">{totalPages.toLocaleString()}</div>
-              <div>Browse Pages</div>
+              <div className="text-2xl font-bold text-white">100%</div>
+              <div>Free to Use</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white">Monthly</div>
