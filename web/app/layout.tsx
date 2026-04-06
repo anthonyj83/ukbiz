@@ -94,6 +94,7 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="/industries" className="hover:text-white transition-colors">All Industries</a></li>
               <li><a href="/regions" className="hover:text-white transition-colors">All Regions</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
             </ul>
           </div>
           <div>
