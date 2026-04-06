@@ -100,12 +100,6 @@ function CompanyDetail({c, expanded, onToggle}:{c:Company; expanded:boolean; onT
                 target="_blank" rel="noopener noreferrer" className="font-medium text-gray-900 hover:text-blue-600 transition-colors">{c.name}</a>
               {c.hasPreviousName&&<div className="text-xs text-gray-400 mt-0.5">Prev: {c.previousName}</div>}
               <div className="text-xs text-gray-400 font-mono">{c.number}</div>
-              {hasPscs && (
-                <div className="text-xs text-gray-500 mt-1">
-                  {"\ud83d\udc64"} {c.pscs!.slice(0,2).map(p=>p.n).join(", ")}
-                  {(c.pscs!.length > 2) && ` +${c.pscs!.length - 2} more`}
-                </div>
-              )}
             </div>
             {hasDetail && (
               <button onClick={onToggle} className="text-xs text-blue-600 hover:text-blue-700 mt-1 whitespace-nowrap">
@@ -135,7 +129,6 @@ function CompanyDetail({c, expanded, onToggle}:{c:Company; expanded:boolean; onT
             {c.isLP&&<Tag label="LP/LLP" colour="blue"/>}
             {c.numMortgages>0&&<Tag label={`${c.numMortgages} charge${c.numMortgages>1?"s":""}`} colour="blue"/>}
             {c.numMortSatisfied>0&&<Tag label={`${c.numMortSatisfied} satisfied`} colour="green"/>}
-            {(c.pscCount||0)>0&&<Tag label={`${c.pscCount} controller${(c.pscCount||0)>1?"s":""}`} colour="purple"/>}
             {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0&&!c.hasInsolvency&&<Tag label={"Clean \u2713"} colour="green"/>}
           </div>
         </td>
@@ -411,8 +404,8 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
               <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">Loading all {meta.count.toLocaleString()} companies for filtering...</div>
             )}
             <div className="mb-4">
-              <label className="block text-xs font-medium text-gray-600 mb-1">Search by name, postcode, town, company number or controller name</label>
-              <input type="text" value={search} onChange={e=>setSearch(e.target.value)} placeholder="e.g. Acme, BT1, Belfast, NI123456, John Smith..." className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+              <label className="block text-xs font-medium text-gray-600 mb-1">Search by name, postcode, town or company number</label>
+              <input type="text" value={search} onChange={e=>setSearch(e.target.value)} placeholder="e.g. Acme Ltd, BT1, Belfast, NI123456..." className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <Sel label="Company Age" value={ageBracket} onChange={setAgeBracket} options={ageOpts}/>
