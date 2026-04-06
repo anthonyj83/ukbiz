@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ukbizfinder.co.uk/sitemap.xml
+
+# Block search index files from crawlers (not useful for SEO)
+Disallow: /data/search/
+Disallow: /data/ir-pages/
+Disallow: /data/ir-meta/
