@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import fs from "fs";
 import path from "path";
-import CompanySearch from "./CompanySearch";
 import Link from "next/link";
-import HomeSearch from "./HomeSearch";
+import UnifiedSearch from "./UnifiedSearch";
 
 export const metadata: Metadata = {
   title: "UK Business Finder | Company Intelligence Directory",
@@ -112,7 +111,7 @@ export default function HomePage() {
           </p>
 
           {/* Live search */}
-          <HomeSearch industries={industries} regions={regions} manifest={manifest} />
+          <UnifiedSearch industries={industries} regions={regions} manifest={manifest} />
 
           {/* Stats bar */}
           <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-blue-100">
@@ -138,7 +137,6 @@ export default function HomePage() {
 
       {/* Company Search */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 -mt-8 relative z-10 mb-4">
-        <CompanySearch />
       </section>
 
       {/* AdSense slot */}
@@ -202,7 +200,7 @@ export default function HomePage() {
             Updated monthly. Each company listed includes registration number, registered address,
             and incorporation date.
           </p>
-7064          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
             {[
               { title: "Official Source", body: "Data pulled directly from the Companies House bulk download — the same source used by banks and law firms." },
               { title: "Active Companies Only", body: "We filter to active companies only, removing dissolved, struck-off, and dormant entities." },
