@@ -562,10 +562,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                 <span className="inline-block bg-blue-600 text-white text-xs font-medium px-3 py-1.5 rounded-lg">{aff.cta}</span>
               </a>
             ))}
-            <a href="https://find-and-update.company-information.service.gov.uk/advanced-search" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border border-gray-200 rounded-xl p-4 text-center hover:border-gray-400 transition-all">
-              <div className="text-sm font-medium text-gray-700">{"\ud83d\udd0d"} Search Companies House</div>
-              <div className="text-xs text-gray-500 mt-1">Official advanced search</div>
-            </a>
+            
             {Object.keys(s.topChargeHolders || {}).length > 0 && (
               <div className="bg-white border border-gray-200 rounded-xl p-4">
                 <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Top Lenders in Sector</h3>
