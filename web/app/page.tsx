@@ -136,6 +136,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Company Search */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 -mt-8 relative z-10 mb-4">
+        <CompanySearch />
+      </section>
+
       {/* AdSense slot */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div className="bg-gray-100 border border-dashed border-gray-300 rounded-lg p-4 text-center text-sm text-gray-400">
@@ -197,9 +202,6 @@ export default function HomePage() {
             Updated monthly. Each company listed includes registration number, registered address,
             and incorporation date.
           </p>
-
-      <CompanySearch />
-
 7064          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
             {[
               { title: "Official Source", body: "Data pulled directly from the Companies House bulk download — the same source used by banks and law firms." },
