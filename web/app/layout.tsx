@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     url: "https://ukbizfinder.co.uk",
     siteName: "UK Business Finder",
   },
+  verification: { google: "_UDuQDdPde2Avy9_WPc4cIjEZoZ4ml71X_1orFaaDgA" },
   robots: {
     index: true,
     follow: true,
