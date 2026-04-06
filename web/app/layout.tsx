@@ -68,6 +68,7 @@ function Header() {
             <a href="/search" className="hover:text-brand-600 transition-colors">Search All</a>
             <a href="/industries" className="hover:text-brand-600 transition-colors">Browse Industries</a>
             <a href="/regions" className="hover:text-brand-600 transition-colors">Browse Regions</a>
+            <a href="/blog" className="hover:text-brand-600 transition-colors">Blog</a>
             <a href="/about" className="hover:text-brand-600 transition-colors">About</a>
           </nav>
         </div>
