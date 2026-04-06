@@ -135,7 +135,7 @@ function CompanyDetail({c, expanded, onToggle}:{c:Company; expanded:boolean; onT
             {c.isLP&&<Tag label="LP/LLP" colour="blue"/>}
             {c.numMortgages>0&&<Tag label={`${c.numMortgages} charge${c.numMortgages>1?"s":""}`} colour="blue"/>}
             {c.numMortSatisfied>0&&<Tag label={`${c.numMortSatisfied} satisfied`} colour="green"/>}
-            {(c.pscCount||0)>0&&<Tag label={`${c.pscCount} PSC${(c.pscCount||0)>1?"s":""}`} colour="purple"/>}
+            {(c.pscCount||0)>0&&<Tag label={`${c.pscCount} controller${(c.pscCount||0)>1?"s":""}`} colour="purple"/>}
             {!c.accountsOverdue&&!c.confStmtOverdue&&!c.isDormant&&c.numMortgages===0&&!c.hasInsolvency&&<Tag label={"Clean \u2713"} colour="green"/>}
           </div>
         </td>
@@ -375,7 +375,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             {[
               {label:"Total",value:meta.count.toLocaleString()},
-              {label:"With PSCs",value:(dc.companiesWithPscs).toLocaleString()},
+              {label:"With Ownership Data",value:(dc.companiesWithPscs).toLocaleString()},
               {label:"Accts Overdue",value:(dc.accountsOverdue).toLocaleString()},
               {label:"With Charges",value:(dc.hasMortgages).toLocaleString()},
             ].map(x=>(
@@ -388,7 +388,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
 
           {topNats.length > 0 && (
             <div className="bg-white border border-gray-200 rounded-2xl p-4 mb-6">
-              <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Top PSC Nationalities</h3>
+              <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">Top Controller Nationalities</h3>
               <div className="flex flex-wrap gap-2">
                 {topNats.map(([nat, count]) => (
                   <span key={nat} className="text-xs bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full text-gray-700">
@@ -397,7 +397,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                 ))}
               </div>
               {dc.foreignControlled > 0 && (
-                <div className="text-xs text-gray-500 mt-2">{dc.foreignControlled.toLocaleString()} PSCs resident outside the UK</div>
+                <div className="text-xs text-gray-500 mt-2">{dc.foreignControlled.toLocaleString()} controllers resident outside the UK</div>
               )}
             </div>
           )}
@@ -411,7 +411,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
               <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">Loading all {meta.count.toLocaleString()} companies for filtering...</div>
             )}
             <div className="mb-4">
-              <label className="block text-xs font-medium text-gray-600 mb-1">Search by name, postcode, town, company number or PSC name</label>
+              <label className="block text-xs font-medium text-gray-600 mb-1">Search by name, postcode, town, company number or controller name</label>
               <input type="text" value={search} onChange={e=>setSearch(e.target.value)} placeholder="e.g. Acme, BT1, Belfast, NI123456, John Smith..." className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -438,7 +438,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                 {dc.lp>0 && <Tog label={`LPs (${dc.lp})`} active={lpOnly} onClick={()=>setLpOnly(!lpOnly)}/>}
               </div>
               <p className="text-xs text-gray-400 mt-3 leading-relaxed">
-                {"\u26a0\ufe0f"} Compliance flags are based on the Companies House data snapshot dated <strong>2 March 2026</strong>. PSC data updated daily. Always verify on{" "}
+                {"\u26a0\ufe0f"} Compliance flags are based on the Companies House data snapshot dated <strong>2 March 2026</strong>. Persons with Significant Control data updated daily. Always verify on{" "}
                 <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Companies House</a>.
               </p>
             </div>
@@ -520,7 +520,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
               {dc.accountsOverdue>0&&<> {dc.accountsOverdue.toLocaleString()} have overdue accounts.</>}
               {dc.hasMortgages>0&&<> {dc.hasMortgages.toLocaleString()} have registered charges.</>}
               {dc.insolvency>0&&<> {dc.insolvency.toLocaleString()} have insolvency history.</>}
-              {dc.companiesWithPscs>0&&<> {dc.companiesWithPscs.toLocaleString()} have PSC data on file.</>}
+              {dc.companiesWithPscs>0&&<> {dc.companiesWithPscs.toLocaleString()} have Persons with Significant Control data on file.</>}
               {" "}Sourced from Companies House under the Open Government Licence. Updated {meta.updated}.
             </p>
           </div>
