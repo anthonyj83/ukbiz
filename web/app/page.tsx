@@ -203,7 +203,7 @@ export default function HomePage() {
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
             {[
               { title: "Official Source", body: "Data pulled directly from the Companies House bulk download — the same source used by banks and law firms." },
-              { title: "Active Companies Only", body: "We filter to active companies only, removing dissolved, struck-off, and dormant entities." },
+              { title: "Verified Active Status", body: "Every company listed is verified as active on the Companies House register. Dormant and compliance flags are clearly marked so you can filter them out." },
               { title: "Free to Browse", body: "Full company listings are free. No account required. Link out to Companies House for verified filings." },
             ].map((f) => (
               <div key={f.title} className="bg-gray-50 rounded-xl p-5">
