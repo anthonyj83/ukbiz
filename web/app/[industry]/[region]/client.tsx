@@ -351,6 +351,22 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": `${meta.industryName} Companies in ${meta.regionName}`,
+        "description": `Browse ${meta.count.toLocaleString()} active ${meta.industryName.toLowerCase()} companies in ${meta.regionName}. Free company data from Companies House.`,
+        "url": `https://ukbizfinder.co.uk/${meta.industry}/${meta.region}`,
+        "numberOfItems": meta.count,
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ukbizfinder.co.uk"},
+            {"@type": "ListItem", "position": 2, "name": meta.industryName, "item": `https://ukbizfinder.co.uk/${meta.industry}`},
+            {"@type": "ListItem", "position": 3, "name": meta.regionName}
+          ]
+        }
+      })}} />
       <nav className="text-sm text-gray-500 mb-6 flex flex-wrap gap-1 items-center">
         <Link href="/" className="hover:text-blue-600">Home</Link><span>/</span>
         <Link href={`/${meta.industry}`} className="hover:text-blue-600">{meta.industryName}</Link><span>/</span>

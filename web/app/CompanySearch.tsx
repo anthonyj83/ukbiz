@@ -107,6 +107,18 @@ export default function CompanySearch() {
 
   return (
     <div className="mb-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "UK Business Finder",
+        "url": "https://ukbizfinder.co.uk",
+        "description": "Search and browse 2.6 million active UK companies. Free company data from Companies House including ownership, charges, and compliance flags.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ukbizfinder.co.uk/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      })}} />
       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-1">Search UK Companies</h2>
         <p className="text-sm text-gray-500 mb-4">Search across 2.6 million active UK companies by name or company number</p>
