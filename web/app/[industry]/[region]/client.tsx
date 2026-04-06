@@ -447,7 +447,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                 {dc.lp>0 && <Tog label={`LPs (${dc.lp})`} active={lpOnly} onClick={()=>setLpOnly(!lpOnly)}/>}
               </div>
               <p className="text-xs text-gray-400 mt-3 leading-relaxed">
-                {"\u26a0\ufe0f"} Compliance flags are based on the Companies House data snapshot dated <strong>2 March 2026</strong>. Persons with Significant Control data updated daily. Always verify on{" "}
+                {"\u26a0\ufe0f"} Compliance flags are based on the Companies House data snapshot dated <strong>2 March 2026</strong>. Always verify on{" "}
                 <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Companies House</a>.
               </p>
             </div>
