@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node split-data.js && next build",
+    "build": "node split-data.js && node build-search-index.js && next build",
     "start": "next start",
     "lint": "next lint"
   },

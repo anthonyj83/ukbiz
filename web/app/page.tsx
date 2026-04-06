@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import fs from "fs";
 import path from "path";
+import CompanySearch from "./CompanySearch";
 import Link from "next/link";
 import HomeSearch from "./HomeSearch";
 
@@ -196,7 +197,10 @@ export default function HomePage() {
             Updated monthly. Each company listed includes registration number, registered address,
             and incorporation date.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+
+      <CompanySearch />
+
+7064          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
             {[
               { title: "Official Source", body: "Data pulled directly from the Companies House bulk download — the same source used by banks and law firms." },
               { title: "Active Companies Only", body: "We filter to active companies only, removing dissolved, struck-off, and dormant entities." },
