@@ -99,15 +99,15 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-brand-700 to-brand-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-5 leading-tight">
-            UK Company Intelligence,<br className="hidden sm:block" /> Built from Official Data
+            Find Any UK Company.<br className="hidden sm:block" /> Filter. Research. Act.
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Explore{" "}
             <strong className="text-white">
-              {totalCompanies.toLocaleString()}+ active UK companies
+              {totalCompanies.toLocaleString()}+ companies.
             </strong>{" "}
-            across {industries.length} industries and {regions.length} regions.
-            Sourced directly from Companies House.
+            {industries.length} industries. {regions.length} regions.
+            Overdue accounts, ownership structures, charges, insolvencies, compliance flags —
+            all searchable, all free. Built from Companies House data so you don&apos;t have to be.
           </p>
 
           {/* Live search */}
