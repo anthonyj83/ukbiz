@@ -29,6 +29,11 @@ function cleanPrefix(query: string): string {
   return chars.length < 2 ? "" : chars.join("");
 }
 
+function numPrefix(query: string): string {
+  const clean = query.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  return clean.length >= 2 ? clean.slice(0, 2) : "";
+}
+
 export default function UnifiedSearch({ industries, regions, manifest }: {
   industries: Industry[];
   regions: Region[];
@@ -40,6 +45,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
   const cacheRef = useRef<Record<string, SearchResult[]>>({});
+  const numCacheRef = useRef<Record<string, SearchResult[]>>({});
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
   const [selIndustry, setSelIndustry] = useState("All");
   const [selRegion, setSelRegion] = useState("All");
@@ -78,20 +84,37 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
     setSearched(true);
 
     const searchLower = q.toLowerCase().trim();
-    const isNumberSearch = /^\d/.test(q) || /^(SC|NI|OC|SO|NC|NF|FC|IP|AC|CE|CS|GE|GS|GN|IC|LP|NA|NP|RC|RS|SE|SF|SG|SI|SL|SP|SR|ZC)\d/i.test(q);
+    const searchUpper = q.toUpperCase().trim();
+    const isNumberSearch = /^\d/.test(q.trim()) || /^(SC|NI|OC|SO|NC|NF|FC|IP|AC|CE|CS|GE|GS|GN|IC|LP|NA|NP|RC|RS|SE|SF|SG|SI|SL|SP|SR|ZC)\d/i.test(q.trim());
 
     if (isNumberSearch) {
-      const allResults: SearchResult[] = [];
-      for (const entries of Object.values(cacheRef.current)) {
-        for (const e of entries) {
-          if (e.no.toLowerCase().startsWith(searchLower)) {
-            allResults.push(e);
-            if (allResults.length >= 20) break;
-          }
-        }
-        if (allResults.length >= 20) break;
+      const np = numPrefix(q.trim());
+      if (!np) {
+        setCompanyResults([]);
+        setLoading(false);
+        return;
       }
-      setCompanyResults(allResults);
+
+      // Fetch from number index
+      if (!numCacheRef.current[np]) {
+        try {
+          const res = await fetch(`/data/search-num/${np}.json`);
+          if (res.ok) {
+            numCacheRef.current[np] = await res.json();
+          } else {
+            numCacheRef.current[np] = [];
+          }
+        } catch {
+          numCacheRef.current[np] = [];
+        }
+      }
+
+      const entries = numCacheRef.current[np] || [];
+      const matches = entries
+        .filter(e => e.no.toUpperCase().startsWith(searchUpper.replace(/[^A-Z0-9]/g, "")))
+        .slice(0, 20);
+
+      setCompanyResults(matches);
       setLoading(false);
       return;
     }
@@ -155,7 +178,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="Search by company name, number, industry or region (e.g. Acme Ltd, SW1, London)..."
+            placeholder="Search by company name, number, industry or region (e.g. Acme Ltd, 12345678, London)..."
             className="flex-1 rounded-l-xl border-0 px-5 py-4 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <button className="bg-white border-l border-gray-200 px-6 rounded-r-xl text-brand-600 font-semibold hover:bg-gray-50 transition-colors">
@@ -230,7 +253,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
             {/* No results */}
             {!hasAnyResults && searched && !loading && qLower.length >= 3 && (
               <div className="px-4 py-6 text-center text-sm text-gray-500">
-                No results found for "{query}"
+                No results found for &ldquo;{query}&rdquo;
               </div>
             )}
 
