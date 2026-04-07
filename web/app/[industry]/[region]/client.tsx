@@ -469,7 +469,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
               </div>
             ):(
               <div className="overflow-x-auto">
-                <table className="w-full text-sm">
+                <table className="w-full text-sm min-w-[800px]">
                   <thead className="bg-gray-50 border-b border-gray-100">
                     <tr>
                       <th className="text-left px-5 py-3 font-medium text-gray-600">Company</th>
@@ -477,7 +477,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                       <th className="text-left px-4 py-3 font-medium text-gray-600 hidden md:table-cell">Incorporated</th>
                       <th className="text-left px-4 py-3 font-medium text-gray-600 hidden lg:table-cell">Age</th>
                       <th className="text-left px-4 py-3 font-medium text-gray-600 hidden lg:table-cell">Size</th>
-                      <th className="text-left px-4 py-3 font-medium text-gray-600">Flags</th>
+                      <th className="text-left px-4 py-3 font-medium text-gray-600 min-w-[160px]">Flags</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-50">
