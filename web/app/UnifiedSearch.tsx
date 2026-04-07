@@ -14,6 +14,18 @@ interface SearchResult {
   rn: string;
 }
 
+interface PscSearchResult {
+  pn: string;
+  pt: "i" | "c";
+  n: string;
+  no: string;
+  t: string;
+  i: string;
+  in: string;
+  r: string;
+  rn: string;
+}
+
 interface Industry { slug: string; name: string; totalCompanies: number; }
 interface Region { slug: string; name: string; }
 interface ManifestEntry { industry: string; industryName: string; region: string; regionName: string; count: number; }
@@ -34,6 +46,20 @@ function numPrefix(query: string): string {
   return clean.length >= 2 ? clean.slice(0, 2) : "";
 }
 
+function pscPrefix(query: string): string {
+  const skip = new Set(["mr","mrs","ms","miss","dr","sir","lord","lady","prof","professor","dame"]);
+  const words = query.toLowerCase().replace(/[^a-z\s-]/g, "").trim().split(/\s+/).filter(w => !skip.has(w));
+  const surname = words.length > 0 ? words[words.length - 1] : "";
+  const chars: string[] = [];
+  for (const ch of surname) {
+    if (/[a-z]/.test(ch)) {
+      chars.push(ch);
+      if (chars.length === 2) break;
+    }
+  }
+  return chars.length < 2 ? "" : chars.join("");
+}
+
 export default function UnifiedSearch({ industries, regions, manifest }: {
   industries: Industry[];
   regions: Region[];
@@ -42,10 +68,12 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [companyResults, setCompanyResults] = useState<SearchResult[]>([]);
+  const [pscResults, setPscResults] = useState<PscSearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
   const cacheRef = useRef<Record<string, SearchResult[]>>({});
   const numCacheRef = useRef<Record<string, SearchResult[]>>({});
+  const pscCacheRef = useRef<Record<string, PscSearchResult[]>>({});
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
   const [selIndustry, setSelIndustry] = useState("All");
   const [selRegion, setSelRegion] = useState("All");
@@ -55,7 +83,6 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
 
   const qLower = query.toLowerCase().trim();
 
-  // Filter industries and regions client-side (instant)
   const matchedIndustries = qLower.length >= 2
     ? industries.filter(i => i.name.toLowerCase().includes(qLower)).slice(0, 6)
     : [];
@@ -64,18 +91,17 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
     ? regions.filter(r => r.name.toLowerCase().includes(qLower)).slice(0, 4)
     : [];
 
-  // Match industry+region combos from manifest
   const matchedPages = qLower.length >= 2
     ? manifest.filter(m =>
         m.industryName.toLowerCase().includes(qLower) ||
         m.regionName.toLowerCase().includes(qLower)
-      ).slice(0, 0) // don't show these separately, industries/regions cover it
+      ).slice(0, 0)
     : [];
 
-  // Company search (async, fetches from index)
   const searchCompanies = useCallback(async (q: string) => {
     if (q.length < 3) {
       setCompanyResults([]);
+      setPscResults([]);
       setSearched(false);
       return;
     }
@@ -91,11 +117,11 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
       const np = numPrefix(q.trim());
       if (!np) {
         setCompanyResults([]);
+        setPscResults([]);
         setLoading(false);
         return;
       }
 
-      // Fetch from number index
       if (!numCacheRef.current[np]) {
         try {
           const res = await fetch(`/data/search-num/${np}.json`);
@@ -115,13 +141,16 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
         .slice(0, 20);
 
       setCompanyResults(matches);
+      setPscResults([]);
       setLoading(false);
       return;
     }
 
+    // Name search - fetch company index
     const prefix = cleanPrefix(q);
     if (!prefix) {
       setCompanyResults([]);
+      setPscResults([]);
       setLoading(false);
       return;
     }
@@ -142,9 +171,36 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
     const entries = cacheRef.current[prefix] || [];
     const matches = entries
       .filter(e => e.n.toLowerCase().includes(searchLower) || e.no.toLowerCase().includes(searchLower))
-      .slice(0, 20);
+      .slice(0, 15);
 
     setCompanyResults(matches);
+
+    // PSC search - fetch PSC index in parallel
+    const pp = pscPrefix(q);
+    if (pp) {
+      if (!pscCacheRef.current[pp]) {
+        try {
+          const res = await fetch(`/data/search-psc/${pp}.json`);
+          if (res.ok) {
+            pscCacheRef.current[pp] = await res.json();
+          } else {
+            pscCacheRef.current[pp] = [];
+          }
+        } catch {
+          pscCacheRef.current[pp] = [];
+        }
+      }
+
+      const pscEntries = pscCacheRef.current[pp] || [];
+      const pscMatches = pscEntries
+        .filter(e => e.pn.toLowerCase().includes(searchLower))
+        .slice(0, 10);
+
+      setPscResults(pscMatches);
+    } else {
+      setPscResults([]);
+    }
+
     setLoading(false);
   }, []);
 
@@ -154,7 +210,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
     return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
   }, [query, searchCompanies]);
 
-  const hasAnyResults = matchedIndustries.length > 0 || matchedRegions.length > 0 || companyResults.length > 0;
+  const hasAnyResults = matchedIndustries.length > 0 || matchedRegions.length > 0 || companyResults.length > 0 || pscResults.length > 0;
   const showDropdown = qLower.length >= 2 && (hasAnyResults || (searched && !loading));
 
   return (
@@ -178,7 +234,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="Search by company name, number, industry or region (e.g. Acme Ltd, 12345678, London)..."
+            placeholder="Search by company name, number, PSC/owner name, industry or region..."
             className="flex-1 rounded-l-xl border-0 px-5 py-4 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <button className="bg-white border-l border-gray-200 px-6 rounded-r-xl text-brand-600 font-semibold hover:bg-gray-50 transition-colors">
@@ -192,11 +248,9 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
           </div>
         )}
 
-        {/* Results dropdown */}
         {showDropdown && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50 max-h-[28rem] overflow-y-auto">
+          <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50 max-h-[32rem] overflow-y-auto">
 
-            {/* Industries */}
             {matchedIndustries.length > 0 && (
               <div>
                 <div className="px-4 py-2 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industries</div>
@@ -210,7 +264,6 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
               </div>
             )}
 
-            {/* Regions */}
             {matchedRegions.length > 0 && (
               <div>
                 <div className="px-4 py-2 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wide">Regions</div>
@@ -224,7 +277,6 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
               </div>
             )}
 
-            {/* Companies */}
             {companyResults.length > 0 && (
               <div>
                 <div className="px-4 py-2 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wide">Companies</div>
@@ -250,24 +302,48 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
               </div>
             )}
 
-            {/* No results */}
+            {pscResults.length > 0 && (
+              <div>
+                <div className="px-4 py-2 bg-purple-50 text-xs font-semibold text-purple-600 uppercase tracking-wide">Owners / PSCs</div>
+                {pscResults.map((r, i) => (
+                  <div key={`psc-${r.no}-${i}`} className="flex items-start justify-between gap-3 px-4 py-2.5 hover:bg-purple-50/50 transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-medium text-purple-900 truncate">
+                        {r.pt === "i" ? "\ud83d\udc64" : "\ud83c\udfe2"} {r.pn}
+                      </div>
+                      <div className="flex items-center gap-2 mt-0.5">
+                        <a href={`https://find-and-update.company-information.service.gov.uk/company/${r.no}`}
+                          target="_blank" rel="noopener noreferrer"
+                          className="text-xs text-gray-500 hover:text-blue-600 transition-colors truncate">
+                          {r.n}
+                        </a>
+                        <span className="text-xs text-gray-400 font-mono">{r.no}</span>
+                      </div>
+                    </div>
+                    <Link href={`/${r.i}/${r.r}`}
+                      className="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-lg hover:bg-purple-100 transition-colors whitespace-nowrap flex-shrink-0">
+                      {r.rn}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {!hasAnyResults && searched && !loading && qLower.length >= 3 && (
               <div className="px-4 py-6 text-center text-sm text-gray-500">
                 No results found for &ldquo;{query}&rdquo;
               </div>
             )}
 
-            {/* Typing hint */}
-            {qLower.length >= 2 && qLower.length < 3 && companyResults.length === 0 && !matchedIndustries.length && !matchedRegions.length && (
+            {qLower.length >= 2 && qLower.length < 3 && companyResults.length === 0 && pscResults.length === 0 && !matchedIndustries.length && !matchedRegions.length && (
               <div className="px-4 py-4 text-center text-xs text-gray-400">
-                Type one more character to search companies
+                Type one more character to search companies and owners
               </div>
             )}
           </div>
         )}
       </div>
 
-      {/* Browse by Industry & Region */}
       <div className="mt-6 w-full max-w-2xl mx-auto">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
           <p className="text-sm text-blue-100 mb-3 text-center">Or browse by industry and region</p>
@@ -292,7 +368,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
               onClick={() => { if (canBrowse) router.push(`/${selIndustry}/${selRegion}`); }}
               disabled={!canBrowse}
               className={`px-8 py-3 rounded-lg text-sm font-semibold transition-colors ${canBrowse ? "bg-white text-blue-700 hover:bg-gray-100 cursor-pointer" : "bg-white/20 text-blue-200 cursor-not-allowed"}`}>
-              {canBrowse && browseMatch ? `Browse ${browseMatch.count.toLocaleString()} companies →` : "Select both to browse"}
+              {canBrowse && browseMatch ? `Browse ${browseMatch.count.toLocaleString()} companies \u2192` : "Select both to browse"}
             </button>
           </div>
         </div>
