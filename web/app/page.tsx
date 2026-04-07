@@ -107,7 +107,7 @@ export default function HomePage() {
             </strong>{" "}
             {industries.length} industries. {regions.length} regions.
             Overdue accounts, ownership structures, charges, insolvencies, compliance flags —
-            all searchable, all free. Built from Companies House data so you don&apos;t have to be.
+            every filter, every flag, zero cost.
           </p>
 
           {/* Live search */}
