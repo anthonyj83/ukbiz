@@ -7,7 +7,7 @@ import UnifiedSearch from "./UnifiedSearch";
 export const metadata: Metadata = {
   title: "UK Business Finder | Company Intelligence Directory",
   description:
-    "Search and explore active UK companies by industry and region. Built from official Companies House data. Trusted business intelligence — free to browse.",
+    "Search and explore active UK companies by industry and region. Built from official Companies House data. Trusted business intelligence â€” free to browse.",
 };
 
 interface Industry {
@@ -42,46 +42,46 @@ function readJson<T>(filename: string): T | null {
 }
 
 const ICON_MAP: Record<string, string> = {
-  "cleaning":           "🧹",
-  "pest-control":       "🐛",
-  "landscaping":        "🌿",
-  "construction":       "🏗️",
-  "electrical":         "⚡",
-  "plumbing":           "🔧",
-  "accounting":         "📊",
-  "legal":              "⚖️",
-  "software":           "💻",
-  "it-consulting":      "🖥️",
-  "restaurants":        "🍽️",
-  "catering":           "🥗",
-  "hotels":             "🏨",
-  "accommodation":      "🛏️",
-  "healthcare":         "🏥",
-  "recruitment":        "👥",
-  "transport":          "🚛",
-  "security":           "🔒",
-  "beauty":             "💄",
-  "automotive":         "🚗",
-  "financial-services": "💰",
-  "marketing":          "📣",
-  "property-management":"🏠",
-  "waste-management":   "♻️",
-  "childcare":          "👶",
-  "veterinary":         "🐾",
-  "training":           "🎓",
-  "events":             "🎤",
-  "photography":        "📷",
-  "architecture":       "📐",
-  "engineering":        "⚙️",
-  "printing":           "🖨️",
-  "taxis":              "🚕",
-  "arts":               "🎨",
-  "retail":             "🛍️",
-  "ecommerce":          "📦",
-  "wholesale":          "🏭",
-  "sports":             "⚽",
-  "funeral":            "🕊️",
-  "pharmacy":           "💊",
+  "cleaning":           "ðŸ§¹",
+  "pest-control":       "ðŸ›",
+  "landscaping":        "ðŸŒ¿",
+  "construction":       "ðŸ—ï¸",
+  "electrical":         "âš¡",
+  "plumbing":           "ðŸ”§",
+  "accounting":         "ðŸ“Š",
+  "legal":              "âš–ï¸",
+  "software":           "ðŸ’»",
+  "it-consulting":      "ðŸ–¥ï¸",
+  "restaurants":        "ðŸ½ï¸",
+  "catering":           "ðŸ¥—",
+  "hotels":             "ðŸ¨",
+  "accommodation":      "ðŸ›ï¸",
+  "healthcare":         "ðŸ¥",
+  "recruitment":        "ðŸ‘¥",
+  "transport":          "ðŸš›",
+  "security":           "ðŸ”’",
+  "beauty":             "ðŸ’„",
+  "automotive":         "ðŸš—",
+  "financial-services": "ðŸ’°",
+  "marketing":          "ðŸ“£",
+  "property-management":"ðŸ ",
+  "waste-management":   "â™»ï¸",
+  "childcare":          "ðŸ‘¶",
+  "veterinary":         "ðŸ¾",
+  "training":           "ðŸŽ“",
+  "events":             "ðŸŽ¤",
+  "photography":        "ðŸ“·",
+  "architecture":       "ðŸ“",
+  "engineering":        "âš™ï¸",
+  "printing":           "ðŸ–¨ï¸",
+  "taxis":              "ðŸš•",
+  "arts":               "ðŸŽ¨",
+  "retail":             "ðŸ›ï¸",
+  "ecommerce":          "ðŸ“¦",
+  "wholesale":          "ðŸ­",
+  "sports":             "âš½",
+  "funeral":            "ðŸ•Šï¸",
+  "pharmacy":           "ðŸ’Š",
 };
 
 export default function HomePage() {
@@ -100,14 +100,14 @@ export default function HomePage() {
         <div className="absolute inset-0" style={{backgroundImage: "url(/hero-bg.png)", backgroundSize: "cover", backgroundPosition: "center"}} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-[1.75rem] sm:text-5xl font-bold mb-5 leading-tight text-center">
-            Find Any UK Company<br /> <span className="whitespace-nowrap">Filter — Research — Act</span>
+            Find Any UK Company<br /> <span className="whitespace-nowrap">Filter â€” Research â€” Act</span>
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             <strong className="text-white">
               {totalCompanies.toLocaleString()}+ companies.
             </strong>{" "}
             {industries.length} industries. {regions.length} regions.
-            Overdue accounts, ownership structures, charges, insolvencies, compliance flags —
+            Overdue accounts, ownership structures, charges, insolvencies, compliance flags â€”
             every filter, every flag, zero cost.
           </p>
 
@@ -140,7 +140,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-            More Than a Directory — A Research Tool
+            More Than a Directory â€” A Research Tool
           </h2>
           <p className="text-gray-500 text-base max-w-2xl mx-auto">
             Pick an industry and region above, then unlock powerful filters on every listing page.
@@ -149,12 +149,12 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { icon: "🔍", title: "Search Within Results", desc: "Filter by company name, postcode, town, or company number within any industry/region." },
-            { icon: "📅", title: "Filter by Company Age", desc: "Narrow results to companies incorporated in the last 1, 2, 5, or 10+ years." },
-            { icon: "📏", title: "Filter by Size & Type", desc: "Filter by official company size band and type — Ltd, LLP, PLC, and more." },
-            { icon: "📍", title: "Drill Down by Town & County", desc: "Go beyond regions — filter to a specific town or county within the listing." },
-            { icon: "⚠️", title: "Spot Compliance Red Flags", desc: "Quick filters for overdue accounts, overdue confirmation statements, and dormant companies." },
-            { icon: "🏦", title: "Ownership & Charges Intelligence", desc: "Identify foreign-controlled, corporate-owned companies, and those with active or satisfied charges." },
+            { icon: "ðŸ”", title: "Search Within Results", desc: "Filter by company name, postcode, town, or company number within any industry/region." },
+            { icon: "ðŸ“…", title: "Filter by Company Age", desc: "Narrow results to companies incorporated in the last 1, 2, 5, or 10+ years." },
+            { icon: "ðŸ“", title: "Filter by Size & Type", desc: "Filter by official company size band and type â€” Ltd, LLP, PLC, and more." },
+            { icon: "ðŸ“", title: "Drill Down by Town & County", desc: "Go beyond regions â€” filter to a specific town or county within the listing." },
+            { icon: "âš ï¸", title: "Spot Compliance Red Flags", desc: "Quick filters for overdue accounts, overdue confirmation statements, and dormant companies." },
+            { icon: "ðŸ¦", title: "Ownership & Charges Intelligence", desc: "Identify foreign-controlled, corporate-owned companies, and those with active or satisfied charges." },
           ].map((f) => (
             <div key={f.title} className="bg-white border border-gray-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all">
               <div className="text-2xl mb-3">{f.icon}</div>
@@ -165,7 +165,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-sm text-gray-400 mb-4">See it in action — try an example:</p>
+          <p className="text-sm text-gray-400 mb-4">See it in action â€” try an example:</p>
           <div className="flex flex-wrap justify-center gap-2">
             {[
               { label: "Construction in London", href: "/construction/london" },
@@ -174,7 +174,7 @@ export default function HomePage() {
             ].map((ex) => (
               <Link key={ex.href} href={ex.href}
                 className="inline-block bg-brand-50 text-brand-700 text-sm font-medium px-4 py-2 rounded-lg hover:bg-brand-100 transition-colors">
-                {ex.label} →
+                {ex.label} â†’
               </Link>
             ))}
           </div>
@@ -186,7 +186,7 @@ export default function HomePage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-gray-900">Browse by Industry</h2>
           <Link href="/industries" className="text-brand-600 hover:text-brand-700 text-sm font-medium">
-            View all →
+            View all â†’
           </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -196,7 +196,7 @@ export default function HomePage() {
               href={`/${ind.slug}`}
               className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-brand-300 hover:shadow-sm transition-all group"
             >
-              <div className="text-2xl mb-2">{ICON_MAP[ind.slug] ?? "🏢"}</div>
+              <div className="text-2xl mb-2">{ICON_MAP[ind.slug] ?? "ðŸ¢"}</div>
               <div className="text-xs font-medium text-gray-800 group-hover:text-brand-600 leading-tight mb-1">
                 {ind.name}
               </div>
@@ -237,7 +237,7 @@ export default function HomePage() {
           </p>
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
             {[
-              { title: "Official Source", body: "Data pulled directly from the Companies House bulk download — the same source used by banks and law firms." },
+              { title: "Official Source", body: "Data pulled directly from the Companies House bulk download â€” the same source used by banks and law firms." },
               { title: "Verified Active Status", body: "Every company listed is verified as active on the Companies House register. Dormant and compliance flags are clearly marked so you can filter them out." },
               { title: "Free to Browse", body: "Full company listings are free. No account required. Link out to Companies House for verified filings." },
             ].map((f) => (

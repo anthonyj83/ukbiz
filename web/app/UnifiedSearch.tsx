@@ -155,7 +155,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="Search by company name, number, industry or region (e.g. Acme Ltd, SW1, London)..."
+            placeholder="Company Ltd, SW1, London, 12345678"
             className="flex-1 rounded-l-xl border-0 px-5 py-4 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <button className="bg-white border-l border-gray-200 px-6 rounded-r-xl text-brand-600 font-semibold hover:bg-gray-50 transition-colors">
