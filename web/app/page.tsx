@@ -99,7 +99,7 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-brand-700 to-brand-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-5 leading-tight">
-            Find Any UK Company.<br className="hidden sm:block" /> Filter. Research. Act.
+            Find Any UK Company<br className="hidden sm:block" /> Filter — Research — Act
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             <strong className="text-white">
