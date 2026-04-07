@@ -90,7 +90,7 @@ export default function AboutPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Contact</h2>
           <p>
             For data queries or removal requests, email:{" "}
-            <a href="mailto:hello@ukbizfinder.co.uk" className="text-brand-600 hover:underline">
+            <a href="mailto:info@ukbizfinder.co.uk" className="text-brand-600 hover:underline">
               hello@ukbizfinder.co.uk
             </a>
           </p>
