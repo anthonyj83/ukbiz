@@ -421,7 +421,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
             )}
             <div className="mb-4">
               <label className="block text-xs font-medium text-gray-600 mb-1">Search by name, postcode, town or company number</label>
-              <input type="text" value={search} onChange={e=>setSearch(e.target.value)} placeholder="e.g. Acme Ltd, BT1, Belfast, NI123456..." className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+              <input type="text" value={search} onChange={e=>setSearch(e.target.value)} placeholder="e.g. Company Ltd, SW1, London, 12345678..." className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <Sel label="Company Age" value={ageBracket} onChange={setAgeBracket} options={ageOpts}/>
