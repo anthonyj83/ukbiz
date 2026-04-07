@@ -122,8 +122,8 @@ function CompanyDetail({c, expanded, onToggle}:{c:Company; expanded:boolean; onT
         <td className="px-4 py-3.5">
           <div className="flex flex-wrap gap-1">
             {c.hasInsolvency&&<Tag label={"\u26a0 Insolvency"} colour="red"/>}
-            {c.accountsOverdue&&<Tag label={"Accts \u26a0\ufe0f"} colour="red"/>}
-            {c.confStmtOverdue&&<Tag label={"ConfStmt \u26a0\ufe0f"} colour="amber"/>}
+            {c.accountsOverdue&&<Tag label={"Accts overdue (Mar 2026)"} colour="red"/>}
+            {c.confStmtOverdue&&<Tag label={"ConfStmt overdue (Mar 2026)"} colour="amber"/>}
             {c.isDormant&&<Tag label="Dormant" colour="gray"/>}
             {c.isOverseas&&<Tag label="Overseas" colour="purple"/>}
             {c.isLP&&<Tag label="LP/LLP" colour="blue"/>}
@@ -447,7 +447,7 @@ export default function IndustryRegionClient({meta,initialCompanies,otherRegions
                 {dc.lp>0 && <Tog label={`LPs (${dc.lp})`} active={lpOnly} onClick={()=>setLpOnly(!lpOnly)}/>}
               </div>
               <p className="text-xs text-gray-400 mt-3 leading-relaxed">
-                {"\u26a0\ufe0f"} Compliance flags are based on the Companies House data snapshot dated <strong>2 March 2026</strong>. Always verify on{" "}
+                {"\u26a0\ufe0f"} Compliance flags are based on the Companies House data snapshot dated <strong>2 March 2026</strong>. Compliance flags are based on a snapshot dated 2 March 2026. Accounts and statements may have been filed since this date. Always verify on{" "}
                 <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">Companies House</a>.
               </p>
             </div>
