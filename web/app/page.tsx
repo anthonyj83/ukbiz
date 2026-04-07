@@ -135,6 +135,51 @@ export default function HomePage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 -mt-8 relative z-10 mb-4">
       </section>
 
+      {/* Feature showcase */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+            More Than a Directory — A Research Tool
+          </h2>
+          <p className="text-gray-500 text-base max-w-2xl mx-auto">
+            Pick an industry and region above, then unlock powerful filters on every listing page.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { icon: "🔍", title: "Search Within Results", desc: "Filter by company name, postcode, town, or company number within any industry/region." },
+            { icon: "📅", title: "Filter by Company Age", desc: "Narrow results to companies incorporated in the last 1, 2, 5, or 10+ years." },
+            { icon: "📏", title: "Filter by Size & Type", desc: "Filter by official company size band and type — Ltd, LLP, PLC, and more." },
+            { icon: "📍", title: "Drill Down by Town & County", desc: "Go beyond regions — filter to a specific town or county within the listing." },
+            { icon: "⚠️", title: "Spot Compliance Red Flags", desc: "Quick filters for overdue accounts, overdue confirmation statements, and dormant companies." },
+            { icon: "🏦", title: "Ownership & Charges Intelligence", desc: "Identify foreign-controlled, corporate-owned companies, and those with active or satisfied charges." },
+          ].map((f) => (
+            <div key={f.title} className="bg-white border border-gray-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all">
+              <div className="text-2xl mb-3">{f.icon}</div>
+              <h3 className="font-semibold text-gray-900 text-sm mb-1.5">{f.title}</h3>
+              <p className="text-gray-500 text-xs leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-400 mb-4">See it in action — try an example:</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              { label: "Construction in London", href: "/construction/london" },
+              { label: "Restaurants in Manchester", href: "/restaurants/greater-manchester" },
+              { label: "Software in South East", href: "/software/south-east" },
+            ].map((ex) => (
+              <Link key={ex.href} href={ex.href}
+                className="inline-block bg-brand-50 text-brand-700 text-sm font-medium px-4 py-2 rounded-lg hover:bg-brand-100 transition-colors">
+                {ex.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Industries grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between mb-6">
