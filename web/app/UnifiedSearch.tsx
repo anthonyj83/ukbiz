@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface SearchResult {
   n: string;
@@ -33,12 +34,18 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
   regions: Region[];
   manifest: ManifestEntry[];
 }) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [companyResults, setCompanyResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
   const cacheRef = useRef<Record<string, SearchResult[]>>({});
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const [selIndustry, setSelIndustry] = useState("All");
+  const [selRegion, setSelRegion] = useState("All");
+
+  const canBrowse = selIndustry !== "All" && selRegion !== "All";
+  const browseMatch = canBrowse ? manifest.find(m => m.industry === selIndustry && m.region === selRegion) : null;
 
   const qLower = query.toLowerCase().trim();
 
@@ -235,6 +242,35 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
             )}
           </div>
         )}
+      </div>
+
+      {/* Browse by Industry & Region */}
+      <div className="mt-6 w-full max-w-2xl mx-auto">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <p className="text-sm text-blue-100 mb-3 text-center">Or browse by industry and region</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <select value={selIndustry} onChange={e => setSelIndustry(e.target.value)}
+              className="flex-1 rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <option value="All">All industries</option>
+              {industries.map(i => (
+                <option key={i.slug} value={i.slug}>{i.name} ({i.totalCompanies.toLocaleString()})</option>
+              ))}
+            </select>
+            <select value={selRegion} onChange={e => setSelRegion(e.target.value)}
+              className="flex-1 rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <option value="All">All regions</option>
+              {regions.map(r => (
+                <option key={r.slug} value={r.slug}>{r.name}</option>
+              ))}
+            </select>
+            <button
+              onClick={() => { if (canBrowse) router.push(`/${selIndustry}/${selRegion}`); }}
+              disabled={!canBrowse}
+              className={`px-6 py-3 rounded-lg text-sm font-semibold transition-colors ${canBrowse ? "bg-white text-blue-700 hover:bg-gray-100 cursor-pointer" : "bg-white/20 text-blue-200 cursor-not-allowed"}`}>
+              {canBrowse && browseMatch ? `Browse ${browseMatch.count.toLocaleString()} companies` : "Browse"}
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
