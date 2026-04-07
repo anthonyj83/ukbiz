@@ -248,7 +248,7 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
       <div className="mt-6 w-full max-w-2xl mx-auto">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
           <p className="text-sm text-blue-100 mb-3 text-center">Or browse by industry and region</p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3">
             <select value={selIndustry} onChange={e => setSelIndustry(e.target.value)}
               className="flex-1 rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
               <option value="All">All industries</option>
