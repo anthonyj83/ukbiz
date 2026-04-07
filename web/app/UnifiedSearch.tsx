@@ -248,26 +248,28 @@ export default function UnifiedSearch({ industries, regions, manifest }: {
       <div className="mt-6 w-full max-w-2xl mx-auto">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
           <p className="text-sm text-blue-100 mb-3 text-center">Or browse by industry and region</p>
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <select value={selIndustry} onChange={e => setSelIndustry(e.target.value)}
-              className="flex-1 rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              className="w-full rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
               <option value="All">All industries</option>
               {industries.map(i => (
                 <option key={i.slug} value={i.slug}>{i.name} ({i.totalCompanies.toLocaleString()})</option>
               ))}
             </select>
             <select value={selRegion} onChange={e => setSelRegion(e.target.value)}
-              className="flex-1 rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              className="w-full rounded-lg border-0 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400">
               <option value="All">All regions</option>
               {regions.map(r => (
                 <option key={r.slug} value={r.slug}>{r.name}</option>
               ))}
             </select>
+          </div>
+          <div className="mt-3 text-center">
             <button
               onClick={() => { if (canBrowse) router.push(`/${selIndustry}/${selRegion}`); }}
               disabled={!canBrowse}
-              className={`px-6 py-3 rounded-lg text-sm font-semibold transition-colors ${canBrowse ? "bg-white text-blue-700 hover:bg-gray-100 cursor-pointer" : "bg-white/20 text-blue-200 cursor-not-allowed"}`}>
-              {canBrowse && browseMatch ? `Browse ${browseMatch.count.toLocaleString()} companies` : "Browse"}
+              className={`px-8 py-3 rounded-lg text-sm font-semibold transition-colors ${canBrowse ? "bg-white text-blue-700 hover:bg-gray-100 cursor-pointer" : "bg-white/20 text-blue-200 cursor-not-allowed"}`}>
+              {canBrowse && browseMatch ? `Browse ${browseMatch.count.toLocaleString()} companies →` : "Select both to browse"}
             </button>
           </div>
         </div>
