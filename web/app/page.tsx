@@ -96,9 +96,8 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative text-white py-24 overflow-hidden" style={{background: "linear-gradient(135deg, #0a1628 0%, #0f2240 50%, #0a1628 100%)"}}>
-        <div className="absolute inset-0" style={{backgroundImage: "url(/hero-bg.png)", backgroundSize: "cover", backgroundPosition: "center", opacity: 0.4}} />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <section className="bg-gradient-to-br from-brand-700 to-brand-900 text-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-5 leading-tight">
             Find Any UK Company<br className="hidden sm:block" /> Filter — Research — Act
           </h1>
