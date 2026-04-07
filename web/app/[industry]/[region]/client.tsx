@@ -122,8 +122,8 @@ function CompanyDetail({c, expanded, onToggle}:{c:Company; expanded:boolean; onT
         <td className="px-4 py-3.5">
           <div className="flex flex-wrap gap-1">
             {c.hasInsolvency&&<Tag label={"\u26a0 Insolvency"} colour="red"/>}
-            {c.accountsOverdue&&<Tag label={"Accts overdue (Mar 2026)"} colour="red"/>}
-            {c.confStmtOverdue&&<Tag label={"ConfStmt overdue (Mar 2026)"} colour="amber"/>}
+            {c.accountsOverdue&&<Tag label={"Accts overdue*"} colour="red"/>}
+            {c.confStmtOverdue&&<Tag label={"ConfStmt overdue*"} colour="amber"/>}
             {c.isDormant&&<Tag label="Dormant" colour="gray"/>}
             {c.isOverseas&&<Tag label="Overseas" colour="purple"/>}
             {c.isLP&&<Tag label="LP/LLP" colour="blue"/>}
