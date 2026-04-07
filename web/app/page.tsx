@@ -84,6 +84,22 @@ const ICON_MAP: Record<string, string> = {
   "pharmacy":           "💊",
 };
 
+const REGION_ICON_MAP: Record<string, string> = {
+  "london":           "🏙️",
+  "south-east":       "🌳",
+  "south-west":       "🌊",
+  "east-midlands":    "🏭",
+  "west-midlands":    "🏗️",
+  "east-england":     "🌾",
+  "yorkshire":        "⚒️",
+  "north-west":       "🏙️",
+  "north-east":       "⚓",
+  "scotland":         "🏔️",
+  "wales":            "🐉",
+  "northern-ireland": "☘️",
+};
+
+
 export default function HomePage() {
   const industries = readJson<Industry[]>("industries.json") ?? [];
   const regions    = readJson<Region[]>("regions.json") ?? [];
@@ -92,6 +108,12 @@ export default function HomePage() {
   const totalPages     = manifest.length;
   const totalCompanies = industries.reduce((s, i) => s + i.totalCompanies, 0);
   const topIndustries  = industries.slice(0, 24);
+
+  // Compute per-region company totals
+  const regionTotals: Record<string, number> = {};
+  for (const m of manifest) {
+    regionTotals[m.region] = (regionTotals[m.region] || 0) + m.count;
+  }
 
   return (
     <>
