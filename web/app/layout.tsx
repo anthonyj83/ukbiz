@@ -64,10 +64,18 @@ function Header() {
             </div>
             <span className="font-semibold text-gray-900 text-lg">UK Business Finder</span>
           </a>
+          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600">
             <a href="/search" className="hover:text-brand-600 transition-colors">Search All</a>
             <a href="/industries" className="hover:text-brand-600 transition-colors">Browse Industries</a>
             <a href="/regions" className="hover:text-brand-600 transition-colors">Browse Regions</a>
+            <a href="/blog" className="hover:text-brand-600 transition-colors">Blog</a>
+            <a href="/about" className="hover:text-brand-600 transition-colors">About</a>
+          </nav>
+          {/* Mobile nav */}
+          <nav className="flex md:hidden items-center gap-3 text-xs text-gray-600">
+            <a href="/search" className="hover:text-brand-600 transition-colors">Search</a>
+            <a href="/industries" className="hover:text-brand-600 transition-colors">Industries</a>
             <a href="/blog" className="hover:text-brand-600 transition-colors">Blog</a>
             <a href="/about" className="hover:text-brand-600 transition-colors">About</a>
           </nav>
@@ -109,7 +117,7 @@ function Footer() {
         </div>
         <div className="border-t border-gray-800 pt-6 text-xs text-center">
           <p>
-            © {currentYear} UK Business Finder. Data sourced from{" "}
+            &copy; {currentYear} UK Business Finder. Data sourced from{" "}
             <a
               href="https://www.gov.uk/government/organisations/companies-house"
               className="underline hover:text-white"
