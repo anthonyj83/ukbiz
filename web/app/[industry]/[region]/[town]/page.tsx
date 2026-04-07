@@ -46,7 +46,7 @@ function slugify(text: string): string {
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return [];
+  const manifest = readJson<ManifestEntry[]>("town-manifest.json") ?? []; const seen = new Set<string>(); const params: {industry:string;region:string;town:string}[] = []; for (const m of manifest.filter(x=>x.count>=20)) { const k=m.industry+m.region+m.town; if(seen.has(k)) continue; seen.add(k); params.push({industry:m.industry,region:m.region,town:m.town}); } console.log("Town pages to build:",params.length); return params;
 }
 
 export async function generateMetadata(
