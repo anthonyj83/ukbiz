@@ -59,9 +59,7 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">UK</span>
-            </div>
+            <img src="/logo.png" alt="UK Business Finder" className="h-9 w-auto" />
             <span className="font-semibold text-gray-900 text-lg">UK Business Finder</span>
           </a>
           {/* Desktop nav */}
