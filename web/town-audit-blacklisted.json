@@ -1,0 +1,1608 @@
+[
+  {
+    "town": "Brierley Hill",
+    "companies": 1583,
+    "reason": "blacklisted",
+    "variants": [
+      "Brierley Hill"
+    ]
+  },
+  {
+    "town": "West Midlands",
+    "companies": 1199,
+    "reason": "blacklisted",
+    "variants": [
+      "West Midlands",
+      "West  Midlands"
+    ]
+  },
+  {
+    "town": "Worcester Park",
+    "companies": 1079,
+    "reason": "blacklisted",
+    "variants": [
+      "Worcester Park"
+    ]
+  },
+  {
+    "town": "Burgess Hill",
+    "companies": 1007,
+    "reason": "blacklisted",
+    "variants": [
+      "Burgess Hill"
+    ]
+  },
+  {
+    "town": "Buckhurst Hill",
+    "companies": 908,
+    "reason": "blacklisted",
+    "variants": [
+      "Buckhurst Hill"
+    ]
+  },
+  {
+    "town": "Chester le Street",
+    "companies": 879,
+    "reason": "blacklisted",
+    "variants": [
+      "Chester Le Street"
+    ]
+  },
+  {
+    "town": "Whitehills Business Park",
+    "companies": 523,
+    "reason": "blacklisted",
+    "variants": [
+      "Whitehills Business Park"
+    ]
+  },
+  {
+    "town": "Forest Row",
+    "companies": 306,
+    "reason": "blacklisted",
+    "variants": [
+      "Forest Row"
+    ]
+  },
+  {
+    "town": "Street",
+    "companies": 253,
+    "reason": "blacklisted",
+    "variants": [
+      "Street"
+    ]
+  },
+  {
+    "town": "United Kingdom",
+    "companies": 190,
+    "reason": "blacklisted",
+    "variants": [
+      "United Kingdom"
+    ]
+  },
+  {
+    "town": "England",
+    "companies": 184,
+    "reason": "blacklisted",
+    "variants": [
+      "England"
+    ]
+  },
+  {
+    "town": "Harrow on the Hill",
+    "companies": 181,
+    "reason": "blacklisted",
+    "variants": [
+      "Harrow On The Hill",
+      "Harrow On  The Hill"
+    ]
+  },
+  {
+    "town": "Co Down",
+    "companies": 177,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Down"
+    ]
+  },
+  {
+    "town": "County Durham",
+    "companies": 170,
+    "reason": "blacklisted",
+    "variants": [
+      "County Durham"
+    ]
+  },
+  {
+    "town": "Mill Hill",
+    "companies": 156,
+    "reason": "blacklisted",
+    "variants": [
+      "Mill Hill",
+      "Mill  Hill"
+    ]
+  },
+  {
+    "town": "Brimstage Road",
+    "companies": 145,
+    "reason": "blacklisted",
+    "variants": [
+      "Brimstage Road"
+    ]
+  },
+  {
+    "town": "Co Tyrone",
+    "companies": 126,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Tyrone"
+    ]
+  },
+  {
+    "town": "Squires Gate Lane, Blackpool",
+    "companies": 109,
+    "reason": "blacklisted",
+    "variants": [
+      "Squires Gate Lane, Blackpool"
+    ]
+  },
+  {
+    "town": "Hampton Hill",
+    "companies": 94,
+    "reason": "blacklisted",
+    "variants": [
+      "Hampton Hill"
+    ]
+  },
+  {
+    "town": "Co Antrim",
+    "companies": 92,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Antrim"
+    ]
+  },
+  {
+    "town": "Blackett Street",
+    "companies": 86,
+    "reason": "blacklisted",
+    "variants": [
+      "Blackett Street"
+    ]
+  },
+  {
+    "town": "Park Royal",
+    "companies": 84,
+    "reason": "blacklisted",
+    "variants": [
+      "Park Royal"
+    ]
+  },
+  {
+    "town": "Winchmore Hill",
+    "companies": 77,
+    "reason": "blacklisted",
+    "variants": [
+      "Winchmore Hill"
+    ]
+  },
+  {
+    "town": "Nottingham Business Park",
+    "companies": 77,
+    "reason": "blacklisted",
+    "variants": [
+      "Nottingham Business Park"
+    ]
+  },
+  {
+    "town": "3 Dorset Rise",
+    "companies": 76,
+    "reason": "blacklisted",
+    "variants": [
+      "3 Dorset Rise"
+    ]
+  },
+  {
+    "town": "Scotland",
+    "companies": 74,
+    "reason": "blacklisted",
+    "variants": [
+      "Scotland"
+    ]
+  },
+  {
+    "town": "Biggin Hill",
+    "companies": 74,
+    "reason": "blacklisted",
+    "variants": [
+      "Biggin Hill"
+    ]
+  },
+  {
+    "town": "Trafford Park",
+    "companies": 73,
+    "reason": "blacklisted",
+    "variants": [
+      "Trafford Park"
+    ]
+  },
+  {
+    "town": "Co Durham",
+    "companies": 66,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Durham"
+    ]
+  },
+  {
+    "town": "Gants Hill",
+    "companies": 65,
+    "reason": "blacklisted",
+    "variants": [
+      "Gants Hill"
+    ]
+  },
+  {
+    "town": "Chester-le-Street",
+    "companies": 60,
+    "reason": "blacklisted",
+    "variants": [
+      "Chester-Le-Street"
+    ]
+  },
+  {
+    "town": "Northern Ireland",
+    "companies": 59,
+    "reason": "blacklisted",
+    "variants": [
+      "Northern Ireland"
+    ]
+  },
+  {
+    "town": "Co Londonderry",
+    "companies": 58,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Londonderry"
+    ]
+  },
+  {
+    "town": "Holyhead Road",
+    "companies": 57,
+    "reason": "blacklisted",
+    "variants": [
+      "Holyhead Road"
+    ]
+  },
+  {
+    "town": "Yorkshire",
+    "companies": 57,
+    "reason": "blacklisted",
+    "variants": [
+      "Yorkshire"
+    ]
+  },
+  {
+    "town": "Co Armagh",
+    "companies": 55,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Armagh"
+    ]
+  },
+  {
+    "town": "Newbury Park",
+    "companies": 53,
+    "reason": "blacklisted",
+    "variants": [
+      "Newbury Park"
+    ]
+  },
+  {
+    "town": "Walton on the Hill",
+    "companies": 47,
+    "reason": "blacklisted",
+    "variants": [
+      "Walton On The Hill"
+    ]
+  },
+  {
+    "town": "Landmere Lane, Edwalton",
+    "companies": 47,
+    "reason": "blacklisted",
+    "variants": [
+      "Landmere Lane, Edwalton"
+    ]
+  },
+  {
+    "town": "Manor Park",
+    "companies": 46,
+    "reason": "blacklisted",
+    "variants": [
+      "Manor Park"
+    ]
+  },
+  {
+    "town": "Team Valley Trading Estate",
+    "companies": 44,
+    "reason": "blacklisted",
+    "variants": [
+      "Team Valley Trading Estate"
+    ]
+  },
+  {
+    "town": "Co Derry",
+    "companies": 43,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Derry"
+    ]
+  },
+  {
+    "town": "Kings Hill",
+    "companies": 42,
+    "reason": "blacklisted",
+    "variants": [
+      "Kings Hill"
+    ]
+  },
+  {
+    "town": "Old Hall Road",
+    "companies": 42,
+    "reason": "blacklisted",
+    "variants": [
+      "Old Hall Road"
+    ]
+  },
+  {
+    "town": "Llantarnam Industrial Park",
+    "companies": 40,
+    "reason": "blacklisted",
+    "variants": [
+      "Llantarnam Industrial Park"
+    ]
+  },
+  {
+    "town": "Co Fermanagh",
+    "companies": 39,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Fermanagh"
+    ]
+  },
+  {
+    "town": "Woodside Park",
+    "companies": 36,
+    "reason": "blacklisted",
+    "variants": [
+      "Woodside Park"
+    ]
+  },
+  {
+    "town": "29 Finsbury Circus",
+    "companies": 36,
+    "reason": "blacklisted",
+    "variants": [
+      "29 Finsbury Circus"
+    ]
+  },
+  {
+    "town": "10 Temple Back",
+    "companies": 36,
+    "reason": "blacklisted",
+    "variants": [
+      "10 Temple Back"
+    ]
+  },
+  {
+    "town": "Caterham on the Hill",
+    "companies": 35,
+    "reason": "blacklisted",
+    "variants": [
+      "Caterham On The Hill"
+    ]
+  },
+  {
+    "town": "Hainault Business Park",
+    "companies": 35,
+    "reason": "blacklisted",
+    "variants": [
+      "Hainault Business Park"
+    ]
+  },
+  {
+    "town": "20/20 Business Park",
+    "companies": 34,
+    "reason": "blacklisted",
+    "variants": [
+      "20/20 Business Park"
+    ]
+  },
+  {
+    "town": "Crockham Hill",
+    "companies": 32,
+    "reason": "blacklisted",
+    "variants": [
+      "Crockham Hill"
+    ]
+  },
+  {
+    "town": "Forest Hill",
+    "companies": 31,
+    "reason": "blacklisted",
+    "variants": [
+      "Forest Hill",
+      "Forest  Hill"
+    ]
+  },
+  {
+    "town": "Station Road",
+    "companies": 31,
+    "reason": "blacklisted",
+    "variants": [
+      "Station Road"
+    ]
+  },
+  {
+    "town": "Meridian Business Park",
+    "companies": 30,
+    "reason": "blacklisted",
+    "variants": [
+      "Meridian Business Park"
+    ]
+  },
+  {
+    "town": "Bessborough Road",
+    "companies": 30,
+    "reason": "blacklisted",
+    "variants": [
+      "Bessborough Road"
+    ]
+  },
+  {
+    "town": "Rake Lane",
+    "companies": 28,
+    "reason": "blacklisted",
+    "variants": [
+      "Rake Lane"
+    ]
+  },
+  {
+    "town": "Park Farm Hotel, Norwich Road",
+    "companies": 27,
+    "reason": "blacklisted",
+    "variants": [
+      "Park Farm Hotel, Norwich Road"
+    ]
+  },
+  {
+    "town": "Co Durham, Bishop Auckland",
+    "companies": 27,
+    "reason": "blacklisted",
+    "variants": [
+      "Co Durham, Bishop Auckland"
+    ]
+  },
+  {
+    "town": "Business Park Great Blakenham",
+    "companies": 27,
+    "reason": "blacklisted",
+    "variants": [
+      "Business Park Great Blakenham"
+    ]
+  },
+  {
+    "town": "145 Granville Street",
+    "companies": 26,
+    "reason": "blacklisted",
+    "variants": [
+      "145 Granville Street"
+    ]
+  },
+  {
+    "town": "County Down",
+    "companies": 26,
+    "reason": "blacklisted",
+    "variants": [
+      "County Down"
+    ]
+  },
+  {
+    "town": "Sopers Road",
+    "companies": 25,
+    "reason": "blacklisted",
+    "variants": [
+      "Sopers Road"
+    ]
+  },
+  {
+    "town": "County Antrim",
+    "companies": 25,
+    "reason": "blacklisted",
+    "variants": [
+      "County Antrim"
+    ]
+  },
+  {
+    "town": "Wembley Park",
+    "companies": 24,
+    "reason": "blacklisted",
+    "variants": [
+      "Wembley Park"
+    ]
+  },
+  {
+    "town": "Raynes Park",
+    "companies": 24,
+    "reason": "blacklisted",
+    "variants": [
+      "Raynes Park"
+    ]
+  },
+  {
+    "town": "Co.Down",
+    "companies": 24,
+    "reason": "blacklisted",
+    "variants": [
+      "Co.Down"
+    ]
+  },
+  {
+    "town": "Wales",
+    "companies": 24,
+    "reason": "blacklisted",
+    "variants": [
+      "Wales"
+    ]
+  },
+  {
+    "town": "Co. Down",
+    "companies": 23,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Down"
+    ]
+  },
+  {
+    "town": "Balgownie Road, Bridge of Don",
+    "companies": 22,
+    "reason": "blacklisted",
+    "variants": [
+      "Balgownie Road, Bridge Of Don"
+    ]
+  },
+  {
+    "town": "Tavistock Square",
+    "companies": 22,
+    "reason": "blacklisted",
+    "variants": [
+      "Tavistock Square"
+    ]
+  },
+  {
+    "town": "Cromwell Centre",
+    "companies": 22,
+    "reason": "blacklisted",
+    "variants": [
+      "Cromwell Centre"
+    ]
+  },
+  {
+    "town": "Oakleigh Road South",
+    "companies": 21,
+    "reason": "blacklisted",
+    "variants": [
+      "Oakleigh Road South"
+    ]
+  },
+  {
+    "town": "Gants Hill Ilford",
+    "companies": 21,
+    "reason": "blacklisted",
+    "variants": [
+      "Gants Hill Ilford"
+    ]
+  },
+  {
+    "town": "Hazel Grove",
+    "companies": 21,
+    "reason": "blacklisted",
+    "variants": [
+      "Hazel Grove"
+    ]
+  },
+  {
+    "town": "Brookmans Park",
+    "companies": 19,
+    "reason": "blacklisted",
+    "variants": [
+      "Brookmans Park"
+    ]
+  },
+  {
+    "town": "139 Fountainbridge",
+    "companies": 19,
+    "reason": "blacklisted",
+    "variants": [
+      "139 Fountainbridge"
+    ]
+  },
+  {
+    "town": "Muswell Hill",
+    "companies": 19,
+    "reason": "blacklisted",
+    "variants": [
+      "Muswell Hill"
+    ]
+  },
+  {
+    "town": "Glasgow City Centre",
+    "companies": 19,
+    "reason": "blacklisted",
+    "variants": [
+      "Glasgow City Centre"
+    ]
+  },
+  {
+    "town": "Bow Street",
+    "companies": 18,
+    "reason": "blacklisted",
+    "variants": [
+      "Bow Street"
+    ]
+  },
+  {
+    "town": "Co. Antrim",
+    "companies": 18,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Antrim"
+    ]
+  },
+  {
+    "town": "Co. Tyrone",
+    "companies": 18,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Tyrone"
+    ]
+  },
+  {
+    "town": "Fradley Park",
+    "companies": 18,
+    "reason": "blacklisted",
+    "variants": [
+      "Fradley Park"
+    ]
+  },
+  {
+    "town": "Cardiff Gate Business Park",
+    "companies": 17,
+    "reason": "blacklisted",
+    "variants": [
+      "Cardiff Gate Business Park"
+    ]
+  },
+  {
+    "town": "Finsbury Park",
+    "companies": 17,
+    "reason": "blacklisted",
+    "variants": [
+      "Finsbury Park"
+    ]
+  },
+  {
+    "town": "Moor Row",
+    "companies": 17,
+    "reason": "blacklisted",
+    "variants": [
+      "Moor Row"
+    ]
+  },
+  {
+    "town": "County Armagh",
+    "companies": 16,
+    "reason": "blacklisted",
+    "variants": [
+      "County Armagh"
+    ]
+  },
+  {
+    "town": "Park Row",
+    "companies": 16,
+    "reason": "blacklisted",
+    "variants": [
+      "Park Row"
+    ]
+  },
+  {
+    "town": "Weston Road,Stafford,",
+    "companies": 16,
+    "reason": "blacklisted",
+    "variants": [
+      "Weston Road,Stafford,"
+    ]
+  },
+  {
+    "town": "Edinburgh Park",
+    "companies": 16,
+    "reason": "blacklisted",
+    "variants": [
+      "Edinburgh Park"
+    ]
+  },
+  {
+    "town": "Co. Durham",
+    "companies": 15,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Durham"
+    ]
+  },
+  {
+    "town": "Co.Antrim",
+    "companies": 15,
+    "reason": "blacklisted",
+    "variants": [
+      "Co.Antrim"
+    ]
+  },
+  {
+    "town": "Co.Londonderry",
+    "companies": 15,
+    "reason": "blacklisted",
+    "variants": [
+      "Co.Londonderry"
+    ]
+  },
+  {
+    "town": "Blackbrook Business Park",
+    "companies": 14,
+    "reason": "blacklisted",
+    "variants": [
+      "Blackbrook Business Park"
+    ]
+  },
+  {
+    "town": "Harold Hill",
+    "companies": 14,
+    "reason": "blacklisted",
+    "variants": [
+      "Harold Hill"
+    ]
+  },
+  {
+    "town": "United Business Centre",
+    "companies": 14,
+    "reason": "blacklisted",
+    "variants": [
+      "United Business Centre"
+    ]
+  },
+  {
+    "town": "Enterprise Park",
+    "companies": 14,
+    "reason": "blacklisted",
+    "variants": [
+      "Enterprise Park"
+    ]
+  },
+  {
+    "town": "Pride Park",
+    "companies": 13,
+    "reason": "blacklisted",
+    "variants": [
+      "Pride Park"
+    ]
+  },
+  {
+    "town": "Ladbroke Grove",
+    "companies": 13,
+    "reason": "blacklisted",
+    "variants": [
+      "Ladbroke Grove"
+    ]
+  },
+  {
+    "town": "County Tyrone",
+    "companies": 13,
+    "reason": "blacklisted",
+    "variants": [
+      "County Tyrone"
+    ]
+  },
+  {
+    "town": "Clarbeston Road",
+    "companies": 13,
+    "reason": "blacklisted",
+    "variants": [
+      "Clarbeston Road"
+    ]
+  },
+  {
+    "town": "Highams Park",
+    "companies": 12,
+    "reason": "blacklisted",
+    "variants": [
+      "Highams Park"
+    ]
+  },
+  {
+    "town": "Wrotham Road",
+    "companies": 12,
+    "reason": "blacklisted",
+    "variants": [
+      "Wrotham Road"
+    ]
+  },
+  {
+    "town": "Aycliffe Business Park",
+    "companies": 12,
+    "reason": "blacklisted",
+    "variants": [
+      "Aycliffe Business Park"
+    ]
+  },
+  {
+    "town": "19 Kingsmead",
+    "companies": 12,
+    "reason": "blacklisted",
+    "variants": [
+      "19 Kingsmead"
+    ]
+  },
+  {
+    "town": "Gidea Park",
+    "companies": 12,
+    "reason": "blacklisted",
+    "variants": [
+      "Gidea Park"
+    ]
+  },
+  {
+    "town": "Uk",
+    "companies": 11,
+    "reason": "blacklisted",
+    "variants": [
+      "Uk"
+    ]
+  },
+  {
+    "town": "Grove",
+    "companies": 11,
+    "reason": "blacklisted",
+    "variants": [
+      "Grove"
+    ]
+  },
+  {
+    "town": "Penn Street",
+    "companies": 11,
+    "reason": "blacklisted",
+    "variants": [
+      "Penn Street"
+    ]
+  },
+  {
+    "town": "Upton Park",
+    "companies": 11,
+    "reason": "blacklisted",
+    "variants": [
+      "Upton Park"
+    ]
+  },
+  {
+    "town": "Porz Avenue",
+    "companies": 11,
+    "reason": "blacklisted",
+    "variants": [
+      "Porz Avenue"
+    ]
+  },
+  {
+    "town": "Cheetham Hill",
+    "companies": 11,
+    "reason": "blacklisted",
+    "variants": [
+      "Cheetham Hill"
+    ]
+  },
+  {
+    "town": "Barnards Way Lowestoft",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Barnards Way Lowestoft"
+    ]
+  },
+  {
+    "town": "Pleasley Vale Business Park",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Pleasley Vale Business Park"
+    ]
+  },
+  {
+    "town": "City Centre",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "City Centre"
+    ]
+  },
+  {
+    "town": "Elm Park",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Elm Park"
+    ]
+  },
+  {
+    "town": "Caterham-on-the-Hill",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Caterham-On-The-Hill"
+    ]
+  },
+  {
+    "town": "Harrow-on-the-Hill",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Harrow-On-The-Hill"
+    ]
+  },
+  {
+    "town": "Meadowfield Industrial Estate",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Meadowfield Industrial Estate"
+    ]
+  },
+  {
+    "town": "Dollis Hill",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "Dollis Hill"
+    ]
+  },
+  {
+    "town": "High Street Portishead",
+    "companies": 10,
+    "reason": "blacklisted",
+    "variants": [
+      "High Street Portishead",
+      "High Street  Portishead"
+    ]
+  },
+  {
+    "town": "Milton Park",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Milton Park"
+    ]
+  },
+  {
+    "town": "Euxton Lane, Euxton",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Euxton Lane, Euxton"
+    ]
+  },
+  {
+    "town": "Manor Way, Borehamwood",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Manor Way, Borehamwood"
+    ]
+  },
+  {
+    "town": "Stamford Hill",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Stamford Hill"
+    ]
+  },
+  {
+    "town": "Herne Hill",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Herne Hill"
+    ]
+  },
+  {
+    "town": "7-12 Tavistock Square",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "7-12 Tavistock Square"
+    ]
+  },
+  {
+    "town": "334-336 Goswell Road",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "334-336 Goswell Road"
+    ]
+  },
+  {
+    "town": "Coles Green Road",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Coles Green Road"
+    ]
+  },
+  {
+    "town": "Chiswick Business Park,",
+    "companies": 9,
+    "reason": "blacklisted",
+    "variants": [
+      "Chiswick Business Park,"
+    ]
+  },
+  {
+    "town": "Mildenhall Industrial Estate",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "Mildenhall Industrial Estate"
+    ]
+  },
+  {
+    "town": "5Th Floor",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "5Th Floor"
+    ]
+  },
+  {
+    "town": "Park Great Blakenham Ipswich",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "Park Great Blakenham Ipswich",
+      "Park Great Blakenham  Ipswich"
+    ]
+  },
+  {
+    "town": "Langford Lane",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "Langford Lane"
+    ]
+  },
+  {
+    "town": "Kings Hill, West Malling",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "Kings Hill, West Malling"
+    ]
+  },
+  {
+    "town": "High Street",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "High Street"
+    ]
+  },
+  {
+    "town": "Earls Court",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "Earls Court"
+    ]
+  },
+  {
+    "town": "4 Meteor Way, Lee-on-the-Solent",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "4 Meteor Way, Lee-On-The-Solent"
+    ]
+  },
+  {
+    "town": "20 Birchin Lane",
+    "companies": 8,
+    "reason": "blacklisted",
+    "variants": [
+      "20 Birchin Lane"
+    ]
+  },
+  {
+    "town": "County Derry",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "County Derry"
+    ]
+  },
+  {
+    "town": "Co. Londonderry",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Londonderry"
+    ]
+  },
+  {
+    "town": "Bourne Road",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Bourne Road"
+    ]
+  },
+  {
+    "town": "Rose Hill",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Rose Hill"
+    ]
+  },
+  {
+    "town": "Co.Tyrone",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Co.Tyrone"
+    ]
+  },
+  {
+    "town": "22 Carlton Road",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "22 Carlton Road"
+    ]
+  },
+  {
+    "town": "Co.Armagh",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Co.Armagh"
+    ]
+  },
+  {
+    "town": "Nicholson Road Torquay",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Nicholson Road Torquay"
+    ]
+  },
+  {
+    "town": "Church Road",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Church Road"
+    ]
+  },
+  {
+    "town": "City Road",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "City Road"
+    ]
+  },
+  {
+    "town": "Collier Row",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Collier Row"
+    ]
+  },
+  {
+    "town": "Pendleton Way",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Pendleton Way"
+    ]
+  },
+  {
+    "town": "Coldharbour Lane",
+    "companies": 7,
+    "reason": "blacklisted",
+    "variants": [
+      "Coldharbour Lane"
+    ]
+  },
+  {
+    "town": "33A Pratt Street",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "33A Pratt Street"
+    ]
+  },
+  {
+    "town": "31 King Street West",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "31 King Street West"
+    ]
+  },
+  {
+    "town": "551/553 Wallisdown Road",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "551/553 Wallisdown Road"
+    ]
+  },
+  {
+    "town": "Knowsley Industrial Park",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Knowsley Industrial Park"
+    ]
+  },
+  {
+    "town": "Barnards Way, Lowestoft",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Barnards Way, Lowestoft"
+    ]
+  },
+  {
+    "town": "Merton Park",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Merton Park"
+    ]
+  },
+  {
+    "town": "Co. Derry",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Derry"
+    ]
+  },
+  {
+    "town": "Sheffield Business Park",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Sheffield Business Park"
+    ]
+  },
+  {
+    "town": "Chiswick Business Park",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Chiswick Business Park"
+    ]
+  },
+  {
+    "town": "Wrexham Industrial Estate",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Wrexham Industrial Estate"
+    ]
+  },
+  {
+    "town": "Porz Avenue,, Dunstable",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Porz Avenue,, Dunstable"
+    ]
+  },
+  {
+    "town": "Hampton Court",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Hampton Court"
+    ]
+  },
+  {
+    "town": "Streatham Hill",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Streatham Hill"
+    ]
+  },
+  {
+    "town": "Motspur Park",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Motspur Park"
+    ]
+  },
+  {
+    "town": "Finchley Road",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Finchley Road"
+    ]
+  },
+  {
+    "town": "3/F., 23 Wharf Street",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "3/F., 23 Wharf Street"
+    ]
+  },
+  {
+    "town": "St. Peters Road",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "St. Peters Road"
+    ]
+  },
+  {
+    "town": "Porz Avenue Dunstable",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Porz Avenue Dunstable"
+    ]
+  },
+  {
+    "town": "Old Gloucester Street",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Old Gloucester Street"
+    ]
+  },
+  {
+    "town": "Notting Hill",
+    "companies": 6,
+    "reason": "blacklisted",
+    "variants": [
+      "Notting Hill"
+    ]
+  },
+  {
+    "town": "Granby Industrial Estate",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Granby Industrial Estate"
+    ]
+  },
+  {
+    "town": "Westwood Business Park",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Westwood Business Park"
+    ]
+  },
+  {
+    "town": "Co. Armagh",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Armagh"
+    ]
+  },
+  {
+    "town": "Watermoor Road",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Watermoor Road"
+    ]
+  },
+  {
+    "town": "Regent Centre",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Regent Centre"
+    ]
+  },
+  {
+    "town": "Woodbrook Crescent, Billericay",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Woodbrook Crescent, Billericay"
+    ]
+  },
+  {
+    "town": "Colindale Avenue",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Colindale Avenue"
+    ]
+  },
+  {
+    "town": "New Street, Petworth",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "New Street, Petworth"
+    ]
+  },
+  {
+    "town": "First Floor",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "First Floor"
+    ]
+  },
+  {
+    "town": "Langley Park",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Langley Park"
+    ]
+  },
+  {
+    "town": "2Nd Floor",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "2Nd Floor"
+    ]
+  },
+  {
+    "town": "St. Asaph Business Park",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "St. Asaph Business Park"
+    ]
+  },
+  {
+    "town": "Moulton Park",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Moulton Park"
+    ]
+  },
+  {
+    "town": "Houghton on the Hill",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Houghton On The Hill"
+    ]
+  },
+  {
+    "town": "Longmoor Lane",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Longmoor Lane"
+    ]
+  },
+  {
+    "town": "Park",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Park"
+    ]
+  },
+  {
+    "town": "21 Old Channel Road",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "21 Old Channel Road"
+    ]
+  },
+  {
+    "town": "London Road",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "London Road"
+    ]
+  },
+  {
+    "town": "Theatre Square",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Theatre Square"
+    ]
+  },
+  {
+    "town": "Road",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Road"
+    ]
+  },
+  {
+    "town": "Staple Hill",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Staple Hill"
+    ]
+  },
+  {
+    "town": "Weston Road, Stafford",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Weston Road, Stafford"
+    ]
+  },
+  {
+    "town": "St Pauls Square",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "St Pauls Square"
+    ]
+  },
+  {
+    "town": "50 Cambridge Road",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "50 Cambridge Road"
+    ]
+  },
+  {
+    "town": "Co. Fermanagh",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Co. Fermanagh"
+    ]
+  },
+  {
+    "town": "Wynyard Business Park",
+    "companies": 5,
+    "reason": "blacklisted",
+    "variants": [
+      "Wynyard Business Park"
+    ]
+  },
+  {
+    "town": "Bessborough Road Harrow",
+    "companies": 4,
+    "reason": "blacklisted",
+    "variants": [
+      "Bessborough Road Harrow"
+    ]
+  }
+]
