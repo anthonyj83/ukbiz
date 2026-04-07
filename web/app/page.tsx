@@ -100,7 +100,7 @@ export default function HomePage() {
         <div className="absolute inset-0" style={{backgroundImage: "url(/hero-bg.png)", backgroundSize: "cover", backgroundPosition: "center"}} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-5 leading-tight">
-            Find Any UK Company<br className="hidden sm:block" /> Filter — Research — Act
+            Find Any UK Company<br /> <span className="whitespace-nowrap">Filter — Research — Act</span>
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             <strong className="text-white">
