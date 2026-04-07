@@ -91,7 +91,7 @@ export default function AboutPage() {
           <p>
             For data queries or removal requests, email:{" "}
             <a href="mailto:info@ukbizfinder.co.uk" className="text-brand-600 hover:underline">
-              hello@ukbizfinder.co.uk
+              info@ukbizfinder.co.uk
             </a>
           </p>
         </section>
