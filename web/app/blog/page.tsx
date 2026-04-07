@@ -15,8 +15,50 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "how-to-register-uk-limited-company-2026",
+    title: "How to Register a UK Limited Company in 2026",
+    excerpt: "Everything you need to know about forming a UK limited company. Costs, requirements, documents, and the fastest way to get registered at Companies House.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "best-accounting-software-uk-small-business-2026",
+    title: "Best Accounting Software for UK Small Businesses in 2026",
+    excerpt: "Compare the top accounting software options for UK small businesses. Features, pricing, Making Tax Digital compliance, and which one suits your business.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "do-i-need-business-insurance-uk",
+    title: "Do I Need Business Insurance? A Guide for UK Businesses",
+    excerpt: "Understand which types of business insurance are required and recommended for UK companies. Public liability, professional indemnity, employers' liability explained.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "starting-a-business-checklist-uk-2026",
+    title: "Starting a Business Checklist: Everything You Need in 2026",
+    excerpt: "The complete checklist for starting a UK business. Company registration, banking, insurance, accounting, HMRC, and ongoing compliance obligations.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-to-check-who-owns-uk-company",
+    title: "How to Check Who Owns a UK Company (PSC Register Explained)",
+    excerpt: "Learn how to find out who really owns and controls a UK company using the PSC register. Free tools, what to look for, and red flags to watch for.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "understanding-company-charges-mortgages-uk",
+    title: "Understanding Company Charges and Mortgages in the UK",
+    excerpt: "What are company charges, how do they work, and why do they matter? A plain-English guide to registered charges, mortgages, and what they reveal about a company.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "what-is-person-significant-control-psc",
+    title: "What Is a Person with Significant Control (PSC)?",
+    excerpt: "Understand the UK PSC register: who must be declared, what control thresholds apply, your obligations as a company, and how to look up any company's PSCs for free.",
+    date: "7 April 2026",
+  },
+  {
     slug: "uk-ecommerce-companies-2026",
-    title: "UK E-commerce Companies — How Many Are There in 2026?",
+    title: "UK E-commerce Companies \u2014 How Many Are There in 2026?",
     excerpt: "The UK has over 192,000 active e-commerce and online retail companies. We analyse the sector by region, growth trends, and ownership patterns.",
     date: "7 April 2026",
   },
@@ -34,7 +76,7 @@ const posts: BlogPost[] = [
   },
   {
     slug: "uk-business-hotspots-regions-2026",
-    title: "UK Business Hotspots — Which Regions Have the Most Companies?",
+    title: "UK Business Hotspots \u2014 Which Regions Have the Most Companies?",
     excerpt: "A regional breakdown of the UK's 2.6 million active companies. Where are businesses concentrated and what industries dominate each region?",
     date: "7 April 2026",
   },
@@ -52,14 +94,14 @@ const posts: BlogPost[] = [
   },
   {
     slug: "uk-companies-overdue-accounts-explained",
-    title: "UK Companies with Overdue Accounts — What Does It Mean?",
+    title: "UK Companies with Overdue Accounts \u2014 What Does It Mean?",
     excerpt: "What happens when a company has overdue accounts at Companies House? We explain the flags, the consequences, and how to use this data.",
     date: "7 April 2026",
   },
   {
     slug: "how-many-property-companies-london-2026",
     title: "How Many Property Companies Are in London in 2026?",
-    excerpt: "London has over 99,000 active property companies — more than any other industry/region combination in the UK. We explore why.",
+    excerpt: "London has over 99,000 active property companies \u2014 more than any other industry/region combination in the UK. We explore why.",
     date: "7 April 2026",
   },
   {
@@ -89,7 +131,7 @@ const posts: BlogPost[] = [
   {
     slug: "uk-business-statistics-2026",
     title: "UK Business Statistics 2026: Key Numbers Every Business Owner Should Know",
-    excerpt: "From the total number of active companies to overdue accounts and insolvency rates — the headline figures from 2.6 million UK businesses.",
+    excerpt: "From the total number of active companies to overdue accounts and insolvency rates \u2014 the headline figures from 2.6 million UK businesses.",
     date: "6 April 2026",
   },
 ];
