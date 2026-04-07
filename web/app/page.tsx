@@ -240,9 +240,9 @@ export default function HomePage() {
             <Link
               key={region.slug}
               href={`/region/${region.slug}`}
-              className="bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-brand-300 hover:shadow-sm transition-all"
+              className="bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-brand-300 hover:shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="font-medium text-gray-800 text-sm">{region.name}</span>
+              <span className="text-xl">{REGION_ICON_MAP[region.slug] ?? "\u{1F4CD}"}</span><div><div className="font-medium text-gray-800 text-sm">{region.name}</div><div className="text-xs text-gray-400">{(regionTotals[region.slug] || 0).toLocaleString()} companies</div></div>
             </Link>
           ))}
         </div>
