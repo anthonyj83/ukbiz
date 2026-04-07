@@ -15,21 +15,81 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "uk-ecommerce-companies-2026",
+    title: "UK E-commerce Companies — How Many Are There in 2026?",
+    excerpt: "The UK has over 192,000 active e-commerce and online retail companies. We analyse the sector by region, growth trends, and ownership patterns.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-many-beauty-businesses-uk-2026",
+    title: "How Many Beauty Businesses Are in the UK in 2026?",
+    excerpt: "The UK has over 70,000 active beauty and personal care companies. We explore the boom in beauty entrepreneurship and break down the numbers by region.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-many-healthcare-companies-uk-2026",
+    title: "How Many Healthcare Companies Are in the UK in 2026?",
+    excerpt: "The UK's private healthcare sector has over 125,000 active companies. A regional breakdown with compliance data and growth trends.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "uk-business-hotspots-regions-2026",
+    title: "UK Business Hotspots — Which Regions Have the Most Companies?",
+    excerpt: "A regional breakdown of the UK's 2.6 million active companies. Where are businesses concentrated and what industries dominate each region?",
+    date: "7 April 2026",
+  },
+  {
+    slug: "most-common-business-types-uk-2026",
+    title: "Most Common Business Types in the UK 2026",
+    excerpt: "What are the most popular industries for UK companies? We rank the top 20 sectors by active company count using official data.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-to-check-uk-company-legitimate",
+    title: "How to Check If a UK Company Is Legitimate in 2026",
+    excerpt: "A step-by-step guide to verifying UK companies using free tools and public data. Check registration, accounts, directors, charges and more.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "uk-companies-overdue-accounts-explained",
+    title: "UK Companies with Overdue Accounts — What Does It Mean?",
+    excerpt: "What happens when a company has overdue accounts at Companies House? We explain the flags, the consequences, and how to use this data.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-many-property-companies-london-2026",
+    title: "How Many Property Companies Are in London in 2026?",
+    excerpt: "London has over 99,000 active property companies — more than any other industry/region combination in the UK. We explore why.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-many-it-companies-uk-2026",
+    title: "How Many IT Companies Are in the UK in 2026?",
+    excerpt: "Over 275,000 active IT companies across consulting, software, and services. A breakdown by sub-sector, region, and ownership.",
+    date: "7 April 2026",
+  },
+  {
+    slug: "how-many-restaurants-uk-2026",
+    title: "How Many Restaurants Are There in the UK in 2026?",
+    excerpt: "A data-driven breakdown of the UK's 97,000+ active restaurant and food service companies by region, with ownership and compliance data.",
+    date: "7 April 2026",
+  },
+  {
     slug: "how-many-construction-companies-uk-2026",
     title: "How Many Construction Companies Are There in the UK in 2026?",
-    excerpt: "A data-driven breakdown of the UK's 224,969 active construction companies by region, company age, and compliance status — sourced directly from Companies House.",
+    excerpt: "A data-driven breakdown of the UK's 224,969 active construction companies by region, company age, and compliance status.",
     date: "6 April 2026",
   },
   {
     slug: "uk-company-ownership-foreign-controlled",
     title: "Who Really Owns UK Companies? A Look at Foreign and Corporate Ownership",
-    excerpt: "We analysed Persons with Significant Control data across 2.6 million UK companies to reveal patterns in foreign ownership, corporate control, and nationality breakdown.",
+    excerpt: "We analysed PSC data across 2.6 million UK companies to reveal patterns in foreign ownership, corporate control, and nationality.",
     date: "6 April 2026",
   },
   {
     slug: "uk-business-statistics-2026",
     title: "UK Business Statistics 2026: Key Numbers Every Business Owner Should Know",
-    excerpt: "From the total number of active companies to overdue accounts and insolvency rates — the headline figures from our analysis of 2.6 million UK businesses.",
+    excerpt: "From the total number of active companies to overdue accounts and insolvency rates — the headline figures from 2.6 million UK businesses.",
     date: "6 April 2026",
   },
 ];
