@@ -74,7 +74,7 @@ export default function TownPage(
   if (!entry) notFound();
 
   // Load IR data for this industry+region
-  const irFile = `${params.industry}_${params.region}.json`;
+  const irFile = `${params.industry}__${params.region}.json`;
   const irData = readJson<IRData>(path.join("ir", irFile));
   if (!irData) notFound();
 
