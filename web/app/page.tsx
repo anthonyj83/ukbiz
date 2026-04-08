@@ -96,7 +96,7 @@ const REGION_ICON_MAP: Record<string, string> = {
   "north-east":       "⚓",
   "scotland":         "🏔️",
   "wales":            "🐉",
-  "northern-ireland": "☘️",
+  "northern-ireland": "🌊",
 };
 
 

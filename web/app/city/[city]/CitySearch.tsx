@@ -24,9 +24,9 @@ const INDUSTRY_ICONS: Record<string, string> = {
   "engineering": "\u{2699}\uFE0F", "printing": "\u{1F5A8}\uFE0F", "taxis": "\u{1F695}",
   "arts": "\u{1F3A8}", "retail": "\u{1F6CD}\uFE0F", "ecommerce": "\u{1F4E6}",
   "wholesale": "\u{1F3ED}", "sports": "\u{26BD}", "funeral": "\u{1F54A}\uFE0F",
-  "pharmacy": "\u{1F48A}", "property": "\u{1F3E0}", "management-consulting": "\u{1F4BC}",
-  "building-services": "\u{1F3D7}\uFE0F", "it-services": "\u{1F5A5}\uFE0F",
-  "consultancy": "\u{1F4BC}", "research": "\u{1F52C}", "pr": "\u{1F4E2}",
+  "pharmacy": "\u{1F48A}", "property": "\u{1F3E0}", "management-consulting": "��",
+  "building-services": "🧱", "it-services": "💻",
+  "consultancy": "💡", "research": "\u{1F52C}", "pr": "\u{1F4E2}",
   "data-services": "\u{1F4BE}", "schools": "\u{1F3EB}", "insurance": "\u{1F6E1}\uFE0F",
   "roofing": "\u{1F3E0}", "manufacturing": "\u{1F3ED}", "vehicle-hire": "\u{1F698}",
 };
