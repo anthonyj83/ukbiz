@@ -283,13 +283,14 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
           {CITY_DATA.map((city) => (
-            <div
+            <a
               key={city.slug}
+              href={`/city/${city.slug}`}
               className="bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-brand-300 hover:shadow-sm transition-all flex items-center gap-2"
             >
               <span className="text-xl">{city.emoji}</span>
               <div>
-                <div className="font-medium text-gray-800 text-sm">{city.name}</div>
+                <div className="font-medium text-gray-800 text-sm">{city.name}</a>
                 <div className="text-xs text-gray-400">{city.companies.toLocaleString()} companies</div>
               </div>
             </div>
