@@ -9,7 +9,7 @@ const nextConfig = {
   },
   staticPageGenerationTimeout: 600,
   compress: true,
-  trailingSlash: false,
+  trailingSlash: true,
   poweredByHeader: false,
 };
 module.exports = nextConfig;
