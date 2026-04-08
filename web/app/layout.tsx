@@ -57,9 +57,9 @@ function Header() {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32">
+        <div className="flex items-center justify-between h-40">
           <a href="/" className="flex items-center">
-            <img src="/UKBF-TRANS.png" alt="UK Business Finder" className="h-28 w-auto" />
+            <img src="/UKBF-TRANS.png" alt="UK Business Finder" className="h-36 w-auto" />
           </a>
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600">

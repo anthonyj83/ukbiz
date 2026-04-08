@@ -98,6 +98,33 @@ const REGION_ICON_MAP: Record<string, string> = {
   "wales":            "🐉",
   "northern-ireland": "☘️",
 };
+const CITY_DATA = [
+  { slug: "london", name: "London", emoji: "🏙️", companies: 549948 },
+  { slug: "manchester", name: "Manchester", emoji: "🏗️", companies: 54694 },
+  { slug: "birmingham", name: "Birmingham", emoji: "🔧", companies: 48954 },
+  { slug: "glasgow", name: "Glasgow", emoji: "🏔️", companies: 33231 },
+  { slug: "cardiff", name: "Cardiff", emoji: "🏴", companies: 27871 },
+  { slug: "bristol", name: "Bristol", emoji: "⛵", companies: 26297 },
+  { slug: "leeds", name: "Leeds", emoji: "⚒️", companies: 25421 },
+  { slug: "leicester", name: "Leicester", emoji: "🏭", companies: 23721 },
+  { slug: "liverpool", name: "Liverpool", emoji: "⚓", companies: 23313 },
+  { slug: "nottingham", name: "Nottingham", emoji: "🏹", companies: 22454 },
+  { slug: "edinburgh", name: "Edinburgh", emoji: "🏰", companies: 17271 },
+  { slug: "sheffield", name: "Sheffield", emoji: "⚔️", companies: 17155 },
+  { slug: "coventry", name: "Coventry", emoji: "🏛️", companies: 15856 },
+  { slug: "milton-keynes", name: "Milton Keynes", emoji: "🔄", companies: 14662 },
+  { slug: "bolton", name: "Bolton", emoji: "🏗️", companies: 13337 },
+  { slug: "reading", name: "Reading", emoji: "📚", companies: 13231 },
+  { slug: "southampton", name: "Southampton", emoji: "🚢", companies: 12373 },
+  { slug: "belfast", name: "Belfast", emoji: "☘️", companies: 11148 },
+  { slug: "derby", name: "Derby", emoji: "🏎️", companies: 11072 },
+  { slug: "newcastle-upon-tyne", name: "Newcastle", emoji: "🌉", companies: 11007 },
+  { slug: "norwich", name: "Norwich", emoji: "🌾", companies: 10428 },
+  { slug: "cambridge", name: "Cambridge", emoji: "🎓", companies: 10323 },
+  { slug: "bradford", name: "Bradford", emoji: "🏭", companies: 12043 },
+  { slug: "brighton", name: "Brighton", emoji: "🏖️", companies: 8161 }
+];
+
 
 
 export default function HomePage() {
@@ -244,6 +271,28 @@ export default function HomePage() {
             >
               <span className="text-xl">{REGION_ICON_MAP[region.slug] ?? "\u{1F4CD}"}</span><div><div className="font-medium text-gray-800 text-sm">{region.name}</div><div className="text-xs text-gray-400">{(regionTotals[region.slug] || 0).toLocaleString()} companies</div></div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      
+      {/* Cities grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-900">Browse by City</h2>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {CITY_DATA.map((city) => (
+            <div
+              key={city.slug}
+              className="bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-brand-300 hover:shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="text-xl">{city.emoji}</span>
+              <div>
+                <div className="font-medium text-gray-800 text-sm">{city.name}</div>
+                <div className="text-xs text-gray-400">{city.companies.toLocaleString()} companies</div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
